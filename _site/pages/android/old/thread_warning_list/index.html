@@ -1,0 +1,556 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+<meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>Thread Warning list </title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="Cici's old notebook."><meta name="keywords" content="Android," /><meta name="seo" content="no seo" /><link rel="stylesheet" href="/assets/gitbook/style.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-expandable-chapters-small2/expandable-chapters-small.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-fontsettings/website.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-search-pro/search.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-splitter/splitter.css">
+
+<link rel="stylesheet" href="/assets/gitbook/rouge/base16.css">
+
+<link rel="stylesheet" href="/assets/gitbook/custom.css">
+<link rel="stylesheet" href="/assets/gitbook/custom-local.css">
+<meta name="google-site-verification" content="65zgvtfJFNDdKge0tDpfLKShsOrANSZ0hsdp1prfxzs" />
+<meta name="HandheldFriendly" content="true"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/assets/gitbook/images/apple-touch-icon-precomposed-152.png">
+<link rel="shortcut icon" href="/" type="image/x-icon">
+
+<link rel="stylesheet" href="/assets/custom_css/code1.css"><link rel="stylesheet" href="/assets/custom_css/native.css"></head>
+    <body>
+        <div class="book">
+            
+            <div class="book-summary">
+    <nav role="navigation">
+        <div id="book-search-input" role="search">
+            <input type="text" placeholder="Type to search" />
+        </div>
+        <div id="book-search-input-link" role="search">
+            <a href="/assets/search.html">Click to Search</a>
+        </div>
+        <ul class="summary">
+            <li class="chapter active" data-level="1.1" data-path="" data-nav-item>
+                <a href="http://localhost:4000" data-nav-link>
+                    old
+                </a>
+            </li>
+            <li class="divider"></li>
+            <!-- path =  -->
+            
+            
+	
+	
+	<li class="chapter" data-level="1.1" data-path="http://localhost:4000" data-nav-item><a href="#" data-nav-link> Android </a><ul>
+	
+	
+	<li class="chapter" data-level="1.2" data-path="http://localhost:4000" data-nav-item><a href="#" data-nav-link> thread </a><ul>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/android_thread/" data-nav-link> Android thread</a>
+        </li></ul></li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/kdoc/" data-nav-link> kdoc</a>
+        </li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/adb/" data-nav-link> ADB</a>
+        </li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/intellij_coroutine/" data-nav-link> Intellij 安裝Coroutine</a>
+        </li>
+	
+	
+	<li class="chapter" data-level="1.2" data-path="http://localhost:4000" data-nav-item><a href="#" data-nav-link> 舊的技術 </a><ul>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/old/app_update/" data-nav-link> app update</a>
+        </li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/old/google_sign_in/" data-nav-link> Google Sign-In</a>
+        </li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/old/app_purchase/" data-nav-link> In App Purchase Flow</a>
+        </li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/old/theme_change/" data-nav-link> Theme Change</a>
+        </li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/old/chrome_tabs/" data-nav-link> Chrome Custom Tabs</a>
+        </li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/old/momery_leak/" data-nav-link> Handle Memory Leak</a>
+        </li></ul></li>
+	
+	
+	<li class="chapter" data-level="1.2" data-path="http://localhost:4000" data-nav-item><a href="#" data-nav-link> error </a><ul>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/kapt_err/" data-nav-link> kaptGenerateStubsDebugKotlin task (current target is 17) jvm target</a>
+        </li></ul></li></ul></li></ul>
+    </nav>
+</div>
+            <div class="book-body">
+                <div class="book-header" role="navigation">
+                    <!-- Title -->
+                    <h1>
+                        <i class="fa fa-circle-o-notch fa-spin"></i>
+                        
+                            <a href="." >Thread Warning list</a>
+                        
+                    </h1>
+                </div>
+
+                <div class="body-inner"><div class="page-wrapper" tabindex="-1" role="main">
+    
+
+    <div class="page-inner">
+        <div id="book-search-results">
+            <div class="search-noresults">
+                <section class="normal markdown-section">
+                    
+                        <h1 id="/pages/android/old/thread_warning_list">Thread Warning list</h1>
+                    
+
+                    <p>DB TABLE:</p>
+<ol>
+  <li>SECURITY_INFO :記錄所有log</li>
+  <li>SECURITY_SEARCH :記錄搜尋log的時間</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SECURITY_INFO TABLE的欄位
+Id主鍵
+TIMESTAMP
+DEV_UUID
+PROFILE_ID
+CLIENT_MAC
+CLIENT_IP
+EVENT_CLASS
+EVENT_TYPE
+AGGREGATE_COUNT
+DIR
+REMOTE_IP
+CATEGORY_INDEX
+REMOTE_URL
+COUNTRY_CODE
+REMOTE_URL_SCHEME
+REMOTE_URL_HOST
+REMOTE_URL_PORT
+REMOTE_URL_PATH
+REMOTE_URL_QUERY
+FILE_NAME
+MD5
+MALWARE_GROUP
+SID
+READ
+SEARCH_TYPE
+</code></pre></div></div>
+
+<p>詳情請見eventLog.pptx<br />
+<a href="https://drive.google.com/file/d/1UgQo1pkz947q0hhc1F1yA5OvAA6zNHAr/view?usp=sharing">https://drive.google.com/file/d/1UgQo1pkz947q0hhc1F1yA5OvAA6zNHAr/view?usp=sharing</a>
+參見EXAMPLE5<br />
+<a href="https://drive.google.com/file/d/1mJC0xgmwtUAl0BwdnUnUgmqkEVoJ43EF/view">https://drive.google.com/file/d/1mJC0xgmwtUAl0BwdnUnUgmqkEVoJ43EF/view</a></p>
+
+<p>Cloud API:<br />
+參考EXAMPLE5<br />
+<a href="https://drive.google.com/file/d/1mJC0xgmwtUAl0BwdnUnUgmqkEVoJ43EF/viewLOG_SEARCH_URL = &quot;https://api-alpha.mas.zyxelonline.com/v1/devices/logs/search&quot;;">https://drive.google.com/file/d/1mJC0xgmwtUAl0BwdnUnUgmqkEVoJ43EF/viewLOG_SEARCH_URL = "https://api-alpha.mas.zyxelonline.com/v1/devices/logs/search";</a></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>String json = "{\"start_time\":1526860801,\"end_time\":1526947199,\"query\":{\"dev-uuid\":\"550e8400-e29b-41d4-a716-446655440000\",\"event-class\": [\"threat\"]}, \"size\": 100}";
+</code></pre></div></div>
+
+<p>Search_after意指下次搜尋的timestamp<br />
+排序方式由Timestamp數字大到數字小<br />
+圖1
+<img src="/assets/img/android/old/paging1.png" alt="img" /><br />
+圖2
+<img src="/assets/img/android/old/paging2.png" alt="img" /> 
+SECURITY_SEARH(DB_TABLE1)<br />
+主要記錄搜尋的Timestatmp<br />
+圖3<br />
+<img src="/assets/img/android/old/paging3.png" alt="img" /><br />
+將小的Timestamp(圖2的3)放入”Start”欄位，大的Timestamp+1(圖1的2)放入”END”欄位<br />
+START=小<br />
+END=大</p>
+
+<figure class="highlight">
+  <pre><code class="language-java" data-lang="java"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="code"><pre><span class="cm">/**
+ * @param eventMsg json的資料
+ * @param mac  針對Threat&amp;Warning List的功能，mac只要帶null就好。給Mac的功能是給針對某個Device撈出此Device的Threat&amp;Warning
+ * @param isAfter 若使用者有下滑，參數才會帶true,不然一開始進去Threat&amp;Warning List的頁面，是帶false
+ * @return
+ */</span>
+<span class="kd">private</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">IType</span><span class="o">&gt;</span> <span class="nf">getGroupList</span><span class="o">(</span><span class="nc">String</span> <span class="n">eventMsg</span><span class="o">,</span><span class="nc">String</span> <span class="n">mac</span><span class="o">,</span> <span class="kt">boolean</span> <span class="n">isAfter</span><span class="o">)</span> <span class="o">{</span>
+<span class="o">}</span>
+</pre></td></tr></tbody></table></code></pre>
+</figure>
+
+<p>尋找json中的SearchAfter的值(圖1的1)，若找不到就回-1代表沒下一頁資料</p>
+
+<figure class="highlight">
+  <pre><code class="language-java" data-lang="java"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+</pre></td><td class="code"><pre><span class="kd">private</span> <span class="kt">long</span> <span class="nf">getSearchAfter</span><span class="o">(</span><span class="nc">String</span> <span class="n">eventMsg</span><span class="o">)</span> <span class="o">{}</span>
+</pre></td></tr></tbody></table></code></pre>
+</figure>
+
+<p>SecuritySearchRepo.java</p>
+
+<figure class="highlight">
+  <pre><code class="language-java" data-lang="java"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre><span class="cm">/**
+ * 檢查是否有搜尋過
+ * @param searchAfter
+ * @return
+ */</span>
+<span class="kd">public</span> <span class="nc">SecuritySearch</span> <span class="nf">checkIsExistPre</span><span class="o">(</span><span class="kt">long</span> <span class="n">searchAfter</span><span class="o">){}</span>
+</pre></td></tr></tbody></table></code></pre>
+</figure>
+
+<p>撈資料前會代入SearchAfter的值(圖1的1)，檢查SECURITY_SEARH(DB_TABLE1)是否之前已經搜尋過</p>
+
+<figure class="highlight">
+  <pre><code class="language-sql" data-lang="sql"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+</pre></td><td class="code"><pre><span class="k">where</span> <span class="k">type</span><span class="o">=?</span> <span class="k">and</span>  <span class="k">start</span> <span class="o">&lt;=</span> <span class="o">?</span> <span class="k">and</span> <span class="k">end</span> <span class="o">&gt;</span> <span class="o">?</span> <span class="k">and</span> <span class="n">dev_uuid</span> <span class="o">=</span> <span class="o">?</span> <span class="k">order</span> <span class="k">by</span> <span class="k">start</span> <span class="k">desc</span>
+</pre></td></tr></tbody></table></code></pre>
+</figure>
+
+<p>第一個參數可以代threat/warning<br />
+第二個參數及第三個參數代入SearchAfter的值(圖1的1)</p>
+
+<p>HistoryPresenter.java主要程式碼說明</p>
+
+<p>CASE1:沒有下一頁,searchAfter是-1<br />
+(1)資料庫有存過此SearchAfter-1(程式碼1#418)<br />
+檢查log中第0筆(最大)資料的timestamp是不是比存在資料庫的End那筆還大(程式碼1#427)<br />
+若是的話，要做二件事<br />
+A.要把END值修正成json的第0筆(程式碼1#437,#439)<br />
+B.並把log中所有大於資料庫的End那筆還大的資料全insert到SECURITY_INFO的TABLE(程式碼1#428~#436)<br />
+C.將A的條件帶進資料庫去搜SECURITY_INFO，並把搜尋到的資料Load到UI呈現(程式碼1#441~#451)<br />
+程式碼1
+<img src="/assets/img/android/old/paging4.png" alt="img" /></p>
+
+<p>(2)若沒有撈到之前有搜尋過的SearchAfter，就把資料新增至SECURITY_INFO以及把-1塞到Start與第0筆資料timestamp(End)insert至SECURITY_SEARCH(程式碼1#457)(<程式碼2>#489)  
+Load資料給UI呈現，從SECURITY_SEARCH中的Start跟End還有DEV_UUID的欄位作為參數去撈取SECURITY_INFO的資料(程式碼2#491~#500)  
+程式碼2  
+![img](/assets/img/android/old/paging5.png)</程式碼2></p>
+
+<p>CASE2:有下一頁,SearchAfter不是-1<br />
+(1)資料庫有存過此SearchAfter<br />
+檢查log中第0筆(最大)資料的timestamp是不是比存在資料庫的End那筆還大(程式碼3#230~#235)
+若是的話，要做三件事<br />
+A.新增一筆資料至SECURITY_SEARCH，START為”存在資料庫的End的欄位”,END為log第0筆的timestamp+1(新增前檢查是否資料庫已經存在這筆，沒存在才新增)(程式碼3#247~#248,程式碼3#257)<br />
+B.並把log中所有大於資料庫的End那筆還大的資料全insert到SECURITY_INFO的TABLE(程式碼3#236~#243)<br />
+C.將A的條件帶進資料庫去搜SECURITY_INFO，並把搜尋到的資料Load到UI呈現(程式碼4#289,程式碼5)<br />
+將小於SearchAfter的資料全搜尋出來。(程式碼3#262~#266)<br />
+Load有連續性的資料給UI呈現<br />
+以下的function主要是去Load有連續性的資料給UI作呈現</p>
+
+<figure class="highlight">
+  <pre><code class="language-java" data-lang="java"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+</pre></td><td class="code"><pre><span class="kd">public</span> <span class="kt">void</span> <span class="nf">LoadDB</span><span class="o">(</span><span class="nc">List</span><span class="o">&lt;</span><span class="nc">SecuritySearch</span><span class="o">&gt;</span> <span class="n">searchList</span><span class="o">)</span> <span class="o">{}</span>
+</pre></td></tr></tbody></table></code></pre>
+</figure>
+
+<p>程式碼3<br />
+<img src="/assets/img/android/old/paging6.png" alt="img" /><br />
+程式碼4
+<img src="/assets/img/android/old/paging7.png" alt="img" /><br />
+程式碼5
+<img src="/assets/img/android/old/paging8.png" alt="img" /><br />
+(2)資料庫沒有存過此SearchAfter<br />
+還沒下滑(isAfter=false)<br />
+A.新增一筆資料至SECURITY_SEARCH，START為這一次的SearchAfter,END為Log的第0筆timestamp+1(程式碼2#489)</p>
+
+<p>已下滑(isAfter=true)<br />
+B.新增一筆資料至SECURITY_SEARCH，START為這一次的SearchAfter,END為前一個的Before SearchAfter(程式碼2#489)<br />
+Load資料給UI呈現，從SECURITY_SEARCH中的Start跟End還有DEV_UUID的欄位作為參數去撈取SECURITY_INFO的資料(程式碼2#491~#500)</p>
+
+<p>其它程式碼說明<br />
+1、關於LoadDB的Function<br />
+參見程式碼4<br />
+圖4<br />
+<img src="/assets/img/android/old/paging9.png" alt="img" /><br />
+將以上三筆資料代入程式碼4<br />
+若下一筆資料的END欄位的值與上一筆資料的START欄位的值為相同(程式碼4#283~285)，代表第一筆與第二筆的搜尋資料是連續性的，就繼續跑完整個迴圈(程式碼4#293~#295)<br />
+若下一筆資料的END欄位的值與上一筆資料的START欄位的值不為相同(程式碼4#287~#290)，就直接讀完資料後跳出迴圈，不用去Load不連續的資料。</p>
+
+<p>2.關於資料的尾巴是要呈現轉圈圈還是”資料已經置底”<br />
+程式碼6
+<img src="/assets/img/android/old/paging10.png" alt="img" /><br />
+(1)若SearchAfter為-1就代表沒下一頁資料(程式碼6#521)，將groupList的資料尾端加上FinishType的物件。知道這是最後一筆<br />
+(2)若SearchAfter不為-1就代表還有下一頁資料，將groupList的尾端塞入LoadingType的物件，知道要顯示轉轉轉的圖示。</p>
+
+<p>3.
+程式碼7 
+<img src="/assets/img/android/old/paging11.png" alt="img" /><br />
+把Log的資料，依據年月日分分類。(程式碼7#334~#341)<br />
+最後再把資料組成一個有日期有Log的List(程式碼7#344~349)<br />
+呈現過後的資料會長的像下面<br />
+<img src="/assets/img/android/old/paging12.png" alt="img" /><br />
+<img src="/assets/img/android/old/paging13.png" alt="img" /></p>
+
+<ol>
+  <li>判斷是那種類型
+GET_THREAT_WARNING_LIST_AFTER=針對Threat&amp;Waring有下一頁的資料進行處理(程式碼8#149)<br />
+GET_THREAT_WARNING_LIST=針對Threat&amp;Waring沒有下一頁的資料進行處理(程式碼8#153)<br />
+GET_DEVICE_THREAT_WARNING_LIST_AFTER=針對DEVICE Threat&amp;Waring有下一頁的資料進行處理(程式碼8#159)<br />
+GET_DEVICE_THREAT_WARNING_LIST=針對DEVICE Threat&amp;Waring沒有下一頁的資料進行處理(程式碼8#166)<br />
+程式碼8
+<img src="/assets/img/android/old/paging14.png" alt="img" /></li>
+</ol>
+
+<p>HistoryAdapter.java主要程式碼說明</p>
+
+<p>取得資料的EVENT-TYPE/CATEGORY_INDEX作為分辯，參考詳情請見eventLog.pptx
+<a href="https://drive.google.com/file/d/1UgQo1pkz947q0hhc1F1yA5OvAA6zNHAr/view?usp=sharing">https://drive.google.com/file/d/1UgQo1pkz947q0hhc1F1yA5OvAA6zNHAr/view?usp=sharing</a>
+程式碼9 
+<img src="/assets/img/android/old/paging15.png" alt="img" /> 
+程式碼10 
+<img src="/assets/img/android/old/paging16.png" alt="img" /></p>
+</section>
+            </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div></div>
+    </div>
+</div>
+
+<!-- introduce mathjax support -->
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [ ['$', '$'], ['\\(', '\\)'] ]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script
+  type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+
+<!-- introduce per-page mermaid support -->
+
+
+<!-- introduce mathjax support -->
+<script>
+    function fixes_chrome_anchors() {
+        let chrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+        if (window.location.hash && chrome) {
+            setTimeout(function () {
+                var hash = window.location.hash;
+                window.location.hash = "";
+                window.location.hash = hash;
+            }, 300);
+        }
+    }
+
+    if (document.readyState === "loading") {
+        // Loading hasn't finished yet
+        document.addEventListener("DOMContentLoaded", fixes_chrome_anchors);
+    } else {
+        // `DOMContentLoaded` has already fired
+        fixes_chrome_anchors();
+    }
+</script>
+
+<!------上一頁與下一頁 start---------->
+                    
+                    
+                    
+                    
+    
+                    
+
+                    
+                    <!------上一頁與下一頁 end---------->
+                </div>
+            </div>
+
+            <script>
+            var gitbook = gitbook || [];
+            gitbook.push(function() {
+                gitbook.page.hasChanged({
+    "page": {
+        "title": "Introduction",
+        "level": "1.1",
+        "depth": 1,
+        
+        "next": {
+            "title": "app update",
+            "level": "1.2",
+            "depth": 1,
+            "path": "_pages/android/old/app_update.md",
+            "ref": "_pages/android/old/app_update.md",
+            "articles": []
+        },
+        
+        "dir": "ltr"
+    },    "config": {
+        "plugins": ["fontsettings", "highlight", "livereload", "lunr", "search", "sharing", "theme-default", "livereload"],
+        "styles": {
+            "ebook": "styles/ebook.css",
+            "epub": "styles/epub.css",
+            "mobi": "styles/mobi.css",
+            "pdf": "styles/pdf.css",
+            "print": "styles/print.css",
+            "website": "styles/website.css"
+        },
+        "pluginsConfig": {
+            "expandable-chapter-small2": {
+                "articlesExpand": true,
+            },
+            "fontsettings": {
+                "family": "sans",
+                "size": 2,
+                "theme": "white"
+            },
+            "highlight": {},
+            "livereload": {},
+            "lunr": {
+                "ignoreSpecialCharacters": false,
+                "maxIndexSize": 1000000
+            },
+            "search": {},            "sharing": {
+                "facebook": true,
+
+                "google": false,
+
+                "github": true,
+              
+                "github_link": "https://github.com",
+              
+
+                "telegram": false,
+                "telegram_link": "https://t.me",
+
+                "instapaper": false,
+
+                "twitter": true,
+              
+
+                "vk": false,
+
+                "weibo": false,
+
+                "all": ["facebook", "google", "twitter", "weibo", "instapaper", "github", "telegram"]
+            },
+"theme-default": {
+                "showLevel": false,
+                "styles": {
+                    "ebook": "styles/ebook.css",
+                    "epub": "styles/epub.css",
+                    "mobi": "styles/mobi.css",
+                    "pdf": "styles/pdf.css",
+                    "print": "styles/print.css",
+                    "website": "styles/website.css"
+                }
+            },
+        },
+        "theme": "default",
+        "author": "Tao He",
+        "pdf": {
+            "pageNumbers": true,
+            "fontSize": 12,
+            "fontFamily": "Arial",
+            "paperSize": "a4",
+            "chapterMark": "pagebreak",
+            "pageBreaksBefore": "/",
+            "margin": {
+                "right": 62,
+                "left": 62,
+                "top": 56,
+                "bottom": 56
+            }
+        },
+        "structure": {
+            "langs": "LANGS.md",
+            "readme": "README.md",
+        },
+        "variables": {},
+        "title": "old",
+        "language": "en",
+        "gitbook": "*"
+    },
+    "file": {
+        "path": "_pages/android/old/thread_warning_list.md",
+        "mtime": "2023-05-03 00:00:00 +0800",
+        "type": "markdown"
+    },
+    "gitbook": {
+        "version": "",
+        "time": "2025-04-10 13:53:58 +0800"
+    },
+    "basePath": "",
+    "book": {
+        "language": ""
+    }
+});
+            });
+            </script>
+        </div><script src="/assets/gitbook/gitbook.js"></script>
+<script src="/assets/gitbook/theme.js"></script>
+
+<script src="/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-expandable-chapters-small2/expandable-chapters-small.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-search-pro/search.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-sharing/buttons.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-splitter/splitter.js"></script>
+
+<!--
+<script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+<script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+<script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+<script src="../gitbook/gitbook-plugin-search/search.js"></script>
+-->
+
+<script src="/assets/gitbook/custom.js"></script>
+<script src="/assets/gitbook/custom-local.js"></script>
+
+<!-- 有extra_footer_js--><!-- 進入for--><script src="/assets/js/side_bar.js"></script></body>
+</html>

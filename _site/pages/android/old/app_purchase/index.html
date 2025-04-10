@@ -1,0 +1,665 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+<meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>In App Purchase Flow </title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="Cici's old notebook."><meta name="keywords" content="Android, In App Purchase Flow" /><meta name="seo" content="no seo" /><link rel="stylesheet" href="/assets/gitbook/style.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-expandable-chapters-small2/expandable-chapters-small.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-fontsettings/website.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-search-pro/search.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-splitter/splitter.css">
+
+<link rel="stylesheet" href="/assets/gitbook/rouge/base16.css">
+
+<link rel="stylesheet" href="/assets/gitbook/custom.css">
+<link rel="stylesheet" href="/assets/gitbook/custom-local.css">
+<meta name="google-site-verification" content="65zgvtfJFNDdKge0tDpfLKShsOrANSZ0hsdp1prfxzs" />
+<meta name="HandheldFriendly" content="true"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/assets/gitbook/images/apple-touch-icon-precomposed-152.png">
+<link rel="shortcut icon" href="/" type="image/x-icon">
+
+<link rel="stylesheet" href="/assets/custom_css/code1.css"><link rel="stylesheet" href="/assets/custom_css/native.css"></head>
+    <body>
+        <div class="book">
+            
+            <div class="book-summary">
+    <nav role="navigation">
+        <div id="book-search-input" role="search">
+            <input type="text" placeholder="Type to search" />
+        </div>
+        <div id="book-search-input-link" role="search">
+            <a href="/assets/search.html">Click to Search</a>
+        </div>
+        <ul class="summary">
+            <li class="chapter active" data-level="1.1" data-path="" data-nav-item>
+                <a href="http://localhost:4000" data-nav-link>
+                    old
+                </a>
+            </li>
+            <li class="divider"></li>
+            <!-- path =  -->
+            
+            
+	
+	
+	<li class="chapter" data-level="1.1" data-path="http://localhost:4000" data-nav-item><a href="#" data-nav-link> Android </a><ul>
+	
+	
+	<li class="chapter" data-level="1.2" data-path="http://localhost:4000" data-nav-item><a href="#" data-nav-link> thread </a><ul>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/android_thread/" data-nav-link> Android thread</a>
+        </li></ul></li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/kdoc/" data-nav-link> kdoc</a>
+        </li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/adb/" data-nav-link> ADB</a>
+        </li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/intellij_coroutine/" data-nav-link> Intellij 安裝Coroutine</a>
+        </li>
+	
+	
+	<li class="chapter" data-level="1.2" data-path="http://localhost:4000" data-nav-item><a href="#" data-nav-link> 舊的技術 </a><ul>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/old/app_update/" data-nav-link> app update</a>
+        </li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/old/google_sign_in/" data-nav-link> Google Sign-In</a>
+        </li>
+	
+	
+	<li class="active" data-nav-item>
+    	<a href="/pages/android/old/app_purchase/" data-nav-link> In App Purchase Flow</a>
+        </li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/old/theme_change/" data-nav-link> Theme Change</a>
+        </li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/old/chrome_tabs/" data-nav-link> Chrome Custom Tabs</a>
+        </li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/old/momery_leak/" data-nav-link> Handle Memory Leak</a>
+        </li></ul></li>
+	
+	
+	<li class="chapter" data-level="1.2" data-path="http://localhost:4000" data-nav-item><a href="#" data-nav-link> error </a><ul>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/kapt_err/" data-nav-link> kaptGenerateStubsDebugKotlin task (current target is 17) jvm target</a>
+        </li></ul></li></ul></li></ul>
+    </nav>
+</div>
+            <div class="book-body">
+                <div class="book-header" role="navigation">
+                    <!-- Title -->
+                    <h1>
+                        <i class="fa fa-circle-o-notch fa-spin"></i>
+                        
+                            <a href="." >In App Purchase Flow</a>
+                        
+                    </h1>
+                </div>
+
+                <div class="body-inner"><div class="page-wrapper" tabindex="-1" role="main">
+    
+
+    <div class="page-inner">
+        <div id="book-search-results">
+            <div class="search-noresults">
+                <section class="normal markdown-section">
+                    
+                        <h1 id="/pages/android/old/app_purchase">In App Purchase Flow</h1>
+                    
+
+                    <p>1.匯入google billing Lib</p>
+
+<figure class="highlight">
+  <pre><code class="language-java" data-lang="java"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="code"><pre><span class="n">dependencies</span> <span class="o">{</span>
+    <span class="o">...</span>
+    <span class="n">implementation</span> <span class="err">'</span><span class="n">com</span><span class="o">.</span><span class="na">android</span><span class="o">.</span><span class="na">billingclient</span><span class="o">:</span><span class="nl">billing:</span><span class="mf">2.0</span><span class="o">.</span><span class="mi">3</span><span class="err">'</span>
+<span class="o">}</span>
+</pre></td></tr></tbody></table></code></pre>
+</figure>
+
+<p>2.跟Google Store進行連線<br />
+调用 newBuilder() 以创建 BillingClient 实例。您还必须调用 setListener()</p>
+
+<figure class="highlight">
+  <pre><code class="language-java" data-lang="java"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td><td class="code"><pre><span class="kd">private</span> <span class="nc">BillingClient</span> <span class="n">billingClient</span><span class="o">;</span>
+<span class="o">...</span>
+<span class="n">billingClient</span> <span class="o">=</span> <span class="nc">BillingClient</span><span class="o">.</span><span class="na">newBuilder</span><span class="o">(</span><span class="n">activity</span><span class="o">).</span><span class="na">setListener</span><span class="o">(</span><span class="k">this</span><span class="o">).</span><span class="na">build</span><span class="o">();</span>
+<span class="n">billingClient</span><span class="o">.</span><span class="na">startConnection</span><span class="o">(</span><span class="k">new</span> <span class="nc">BillingClientStateListener</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onBillingSetupFinished</span><span class="o">(</span><span class="nc">BillingResult</span> <span class="n">billingResult</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">billingResult</span><span class="o">.</span><span class="na">getResponseCode</span><span class="o">()</span> <span class="o">==</span> <span class="nc">BillingResponse</span><span class="o">.</span><span class="na">OK</span><span class="o">)</span> <span class="o">{</span>
+            <span class="c1">// The BillingClient is ready. You can query purchases here.</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onBillingServiceDisconnected</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// Try to restart the connection on the next request to</span>
+        <span class="c1">// Google Play by calling the startConnection() method.</span>
+    <span class="o">}</span>
+<span class="o">});</span>
+</pre></td></tr></tbody></table></code></pre>
+</figure>
+
+<p>3.查詢商品<br />
+Subscription</p>
+
+<figure class="highlight">
+  <pre><code class="language-java" data-lang="java"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td><td class="code"><pre><span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">skuList</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
+<span class="c1">//skuList.add(BuildConfig.SUBSCRIPTION_ITEM_1_YEAR_ID);</span>
+<span class="n">skuList</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="nc">BuildConfig</span><span class="o">.</span><span class="na">WSQ60_SUBSCRIPTION_ITEM_1_MONTH_ID</span><span class="o">);</span>
+<span class="nc">SkuDetailsParams</span><span class="o">.</span><span class="na">Builder</span> <span class="n">params</span> <span class="o">=</span> <span class="nc">SkuDetailsParams</span><span class="o">.</span><span class="na">newBuilder</span><span class="o">();</span>
+
+<span class="cm">/**
+ * SUBS is subscriptions type
+ */</span>
+<span class="n">params</span><span class="o">.</span><span class="na">setSkusList</span><span class="o">(</span><span class="n">skuList</span><span class="o">).</span><span class="na">setType</span><span class="o">(</span><span class="nc">BillingClient</span><span class="o">.</span><span class="na">SkuType</span><span class="o">.</span><span class="na">SUBS</span><span class="o">);</span>
+<span class="n">billingClient</span><span class="o">.</span><span class="na">querySkuDetailsAsync</span><span class="o">(</span><span class="n">params</span><span class="o">.</span><span class="na">build</span><span class="o">(),</span>
+        <span class="k">new</span> <span class="nf">SkuDetailsResponseListener</span><span class="o">()</span> <span class="o">{</span>
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onSkuDetailsResponse</span><span class="o">(</span><span class="nc">BillingResult</span> <span class="n">billingResult</span><span class="o">,</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">SkuDetails</span><span class="o">&gt;</span> <span class="n">skuDetailsList</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">querySubscriptionSkuDetailsArrayList</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
+                <span class="k">if</span> <span class="o">(</span><span class="n">billingResult</span><span class="o">.</span><span class="na">getResponseCode</span><span class="o">()</span> <span class="o">==</span> <span class="nc">BillingClient</span><span class="o">.</span><span class="na">BillingResponseCode</span><span class="o">.</span><span class="na">OK</span><span class="o">)</span> <span class="o">{</span>
+                <span class="o">}</span>
+        <span class="o">}</span>
+<span class="o">});</span>
+</pre></td></tr></tbody></table></code></pre>
+</figure>
+
+<p>Consumable</p>
+
+<figure class="highlight">
+  <pre><code class="language-java" data-lang="java"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td><td class="code"><pre><span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">skuList</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;</span> <span class="o">();</span>
+<span class="n">skuList</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"com.zyxel.aishield.consumable.wsq50.1year"</span><span class="o">);</span>
+<span class="n">skuList</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"com.zyxel.aishield.consumable.wsq50.8days”);
+skuList.add("</span><span class="n">com</span><span class="o">.</span><span class="na">zyxel</span><span class="o">.</span><span class="na">aishield</span><span class="o">.</span><span class="na">consumable</span><span class="o">.</span><span class="na">wsq50</span><span class="o">.</span><span class="mi">1</span><span class="n">day</span><span class="s">");
+skuList.add("</span><span class="n">com</span><span class="o">.</span><span class="na">zyxel</span><span class="o">.</span><span class="na">aishield</span><span class="o">.</span><span class="na">consumable</span><span class="o">.</span><span class="na">wsq50</span><span class="o">.</span><span class="mi">2</span><span class="n">hours</span><span class="err">”</span><span class="o">);</span>
+
+<span class="nc">SkuDetailsParams</span><span class="o">.</span><span class="na">Builder</span> <span class="n">params</span> <span class="o">=</span> <span class="nc">SkuDetailsParams</span><span class="o">.</span><span class="na">newBuilder</span><span class="o">();</span>
+<span class="n">params</span><span class="o">.</span><span class="na">setSkusList</span><span class="o">(</span><span class="n">skuList</span><span class="o">).</span><span class="na">setType</span><span class="o">(</span><span class="nc">SkuType</span><span class="o">.</span><span class="na">INAPP</span><span class="o">);</span>
+<span class="n">billingClient</span><span class="o">.</span><span class="na">querySkuDetailsAsync</span><span class="o">(</span><span class="n">params</span><span class="o">.</span><span class="na">build</span><span class="o">(),</span>
+    <span class="k">new</span> <span class="nf">SkuDetailsResponseListener</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onSkuDetailsResponse</span><span class="o">(</span><span class="nc">BillingResult</span> <span class="n">billingResult</span><span class="o">,</span>
+                <span class="nc">List</span><span class="o">&lt;</span><span class="nc">SkuDetails</span><span class="o">&gt;</span> <span class="n">skuDetailsList</span><span class="o">)</span> <span class="o">{</span>
+            <span class="c1">// Process the result.</span>
+        <span class="o">}</span>
+    <span class="o">});</span>
+</pre></td></tr></tbody></table></code></pre>
+</figure>
+
+<p>4.選定要買的商品。購買！</p>
+
+<figure class="highlight">
+  <pre><code class="language-java" data-lang="java"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="nc">BillingFlowParams</span> <span class="n">flowParams</span> <span class="o">=</span> <span class="nc">BillingFlowParams</span><span class="o">.</span><span class="na">newBuilder</span><span class="o">()</span>
+        <span class="o">.</span><span class="na">setSkuDetails</span><span class="o">(</span><span class="n">skuDetails</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">setAccountId</span><span class="o">(</span><span class="s">"scott"</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">build</span><span class="o">();</span>
+<span class="n">billingClient</span><span class="o">.</span><span class="na">launchBillingFlow</span><span class="o">((</span><span class="nc">Activity</span><span class="o">)</span> <span class="k">this</span><span class="o">,</span> <span class="n">flowParams</span><span class="o">);</span>
+</pre></td></tr></tbody></table></code></pre>
+</figure>
+
+<p>5.付款成功</p>
+
+<figure class="highlight">
+  <pre><code class="language-java" data-lang="java"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td><td class="code"><pre><span class="n">billingClient</span> <span class="o">=</span> <span class="nc">BillingClient</span><span class="o">.</span><span class="na">newBuilder</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">())</span>
+        <span class="o">.</span><span class="na">enablePendingPurchases</span><span class="o">()</span>
+        <span class="o">.</span><span class="na">setListener</span><span class="o">(</span><span class="k">new</span> <span class="nc">PurchasesUpdatedListener</span><span class="o">()</span> <span class="o">{</span>
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onPurchasesUpdated</span><span class="o">(</span><span class="nc">BillingResult</span> <span class="n">billingResult</span><span class="o">,</span> <span class="nd">@Nullable</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Purchase</span><span class="o">&gt;</span> <span class="n">purchases</span><span class="o">)</span> <span class="o">{</span>
+                <span class="nc">LogUtil</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="no">TAG</span><span class="o">,</span> <span class="s">"PurchasesUpdatedListener responseCode = "</span> <span class="o">+</span> <span class="n">billingResult</span><span class="o">.</span><span class="na">getResponseCode</span><span class="o">());</span>
+                <span class="k">if</span> <span class="o">(</span><span class="n">billingResult</span><span class="o">.</span><span class="na">getResponseCode</span><span class="o">()</span> <span class="o">==</span> <span class="nc">BillingClient</span><span class="o">.</span><span class="na">BillingResponseCode</span><span class="o">.</span><span class="na">OK</span><span class="o">)</span> <span class="o">{</span>
+                                            <span class="k">for</span> <span class="o">(</span><span class="nc">Purchase</span> <span class="n">purchase</span> <span class="o">:</span> <span class="n">purchases</span><span class="o">)</span> <span class="o">{</span>
+                                                    <span class="n">handlePurchase</span><span class="o">(</span><span class="n">purchase</span><span class="o">);</span>
+                                            <span class="o">}</span>
+                                    <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">billingResult</span><span class="o">.</span><span class="na">getResponseCode</span><span class="o">()</span> <span class="o">==</span> <span class="nc">BillingResponse</span><span class="o">.</span><span class="na">USER_CANCELED</span><span class="o">)</span> <span class="o">{</span>
+                                            <span class="c1">// Handle an error caused by a user cancelling the purchase flow.</span>
+                                    <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+                                            <span class="c1">// Handle any other error codes.</span>
+                                    <span class="o">}</span>
+            <span class="o">}</span>
+        
+<span class="o">}).</span><span class="na">build</span><span class="o">();</span>
+</pre></td></tr></tbody></table></code></pre>
+</figure>
+
+<p>6.確認購買
+确认购买交易</p>
+
+<p>如果您使用的是 Google Play 结算库版本 2.0 或更高版本，则必须在三天内确认所有购买交易。如果没能正确确认，将导致系统对相应购买交易按退款处理。
+您必须在授予用户权利后尽快确认通过 Google Play 结算库收到的所有处于 SUCCESS 状态的购买交易。如果您在三天内未确认购买交易，则用户会自动收到退款，并且 Google Play 会撤消该购买交易。对于待处理的交易，</p>
+
+<p>您可以使用以下某种方法来确认购买交易：</p>
+
+<ul>
+  <li>对于消耗型商品，请使用客户端 API 中的 consumeAsync()。</li>
+  <li>对于非消耗型商品，请使用客户端 API 中的 acknowledgePurchase()。</li>
+  <li>还可以使用服务器 API 中新增的 acknowledge() 方法。</li>
+</ul>
+
+<figure class="highlight">
+  <pre><code class="language-java" data-lang="java"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="code"><pre><span class="nc">ConsumeParams</span> <span class="n">consumeParams</span> <span class="o">=</span> <span class="nc">ConsumeParams</span><span class="o">.</span><span class="na">newBuilder</span><span class="o">()</span>
+        <span class="o">.</span><span class="na">setPurchaseToken</span><span class="o">(</span><span class="n">purchase</span><span class="o">.</span><span class="na">getPurchaseToken</span><span class="o">())</span>
+        <span class="o">.</span><span class="na">build</span><span class="o">();</span>
+<span class="n">billingClient</span><span class="o">.</span><span class="na">consumeAsync</span><span class="o">(</span><span class="n">consumeParams</span><span class="o">,</span> <span class="o">(</span><span class="n">billingResult1</span><span class="o">,</span> <span class="n">purchaseToken</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">{</span>
+    <span class="c1">//如果消耗型的商品購買成功</span>
+    <span class="k">if</span><span class="o">(</span><span class="n">billingResult1</span><span class="o">.</span><span class="na">getResponseCode</span><span class="o">()</span> <span class="o">==</span> <span class="nc">BillingClient</span><span class="o">.</span><span class="na">BillingResponseCode</span><span class="o">.</span><span class="na">OK</span><span class="o">){</span>
+    <span class="o">}</span><span class="k">else</span><span class="o">{</span>
+    <span class="o">}</span>
+<span class="o">});</span>
+</pre></td></tr></tbody></table></code></pre>
+</figure>
+
+<p>(2)Subscription</p>
+
+<figure class="highlight">
+  <pre><code class="language-java" data-lang="java"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="code"><pre><span class="nc">AcknowledgePurchaseParams</span> <span class="n">acknowledgePurchaseParams</span> <span class="o">=</span>
+        <span class="nc">AcknowledgePurchaseParams</span><span class="o">.</span><span class="na">newBuilder</span><span class="o">()</span>
+                <span class="o">.</span><span class="na">setPurchaseToken</span><span class="o">(</span><span class="n">purchase</span><span class="o">.</span><span class="na">getPurchaseToken</span><span class="o">())</span>
+                <span class="o">.</span><span class="na">setDeveloperPayload</span><span class="o">(</span><span class="s">"scott testing developer payload"</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">build</span><span class="o">();</span>
+<span class="n">billingClient</span><span class="o">.</span><span class="na">acknowledgePurchase</span><span class="o">(</span><span class="n">acknowledgePurchaseParams</span><span class="o">,</span> <span class="k">new</span> <span class="nc">AcknowledgePurchaseResponseListener</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onAcknowledgePurchaseResponse</span><span class="o">(</span><span class="nc">BillingResult</span> <span class="n">billingResult</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">LogUtil</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="no">TAG</span><span class="o">,</span> <span class="s">"onAcknowledgePurchaseResponse Subscription getResponseCode = "</span> <span class="o">+</span> <span class="n">billingResult</span><span class="o">.</span><span class="na">getResponseCode</span><span class="o">());</span>
+        <span class="nc">LogUtil</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="no">TAG</span><span class="o">,</span> <span class="s">"onAcknowledgePurchaseResponse Subscription getDebugMessage = "</span> <span class="o">+</span> <span class="n">billingResult</span><span class="o">.</span><span class="na">getDebugMessage</span><span class="o">());</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">billingResult</span><span class="o">.</span><span class="na">getResponseCode</span><span class="o">()</span> <span class="o">==</span> <span class="nc">BillingClient</span><span class="o">.</span><span class="na">BillingResponseCode</span><span class="o">.</span><span class="na">OK</span><span class="o">){</span>
+        <span class="o">}</span><span class="k">else</span><span class="o">{</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">});</span>
+</pre></td></tr></tbody></table></code></pre>
+</figure>
+
+<p>(3)</p>
+
+<figure class="highlight">
+  <pre><code class="language-java" data-lang="java"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td><td class="code"><pre><span class="nc">BillingClient</span> <span class="n">client</span> <span class="o">=</span> <span class="o">...</span>
+<span class="nc">AcknowledgePurchaseResponseListener</span> <span class="n">acknowledgePurchaseResponseListener</span> <span class="o">=</span> <span class="o">...</span>
+
+<span class="kt">void</span> <span class="nf">handlePurchase</span><span class="o">(</span><span class="nc">Purchase</span> <span class="n">purchase</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">purchase</span><span class="o">.</span><span class="na">getPurchaseState</span><span class="o">()</span> <span class="o">==</span> <span class="nc">PurchaseState</span><span class="o">.</span><span class="na">PURCHASED</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// Grant entitlement to the user.</span>
+        <span class="o">...</span>
+
+        <span class="c1">// Acknowledge the purchase if it hasn't already been acknowledged.</span>
+        <span class="k">if</span> <span class="o">(!</span><span class="n">purchase</span><span class="o">.</span><span class="na">isAcknowledged</span><span class="o">())</span> <span class="o">{</span>
+            <span class="nc">AcknowledgePurchaseParams</span> <span class="n">acknowledgePurchaseParams</span> <span class="o">=</span>
+                <span class="nc">AcknowledgePurchaseParams</span><span class="o">.</span><span class="na">newBuilder</span><span class="o">()</span>
+                    <span class="o">.</span><span class="na">setPurchaseToken</span><span class="o">(</span><span class="n">purchase</span><span class="o">.</span><span class="na">getPurchaseToken</span><span class="o">())</span>
+                    <span class="o">.</span><span class="na">build</span><span class="o">();</span>
+            <span class="n">client</span><span class="o">.</span><span class="na">acknowledgePurchase</span><span class="o">(</span><span class="n">acknowledgePurchaseParams</span><span class="o">,</span> <span class="n">acknowledgePurchaseResponseListener</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></td></tr></tbody></table></code></pre>
+</figure>
+</section>
+            </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div></div>
+    </div>
+</div>
+
+<!-- introduce mathjax support -->
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [ ['$', '$'], ['\\(', '\\)'] ]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script
+  type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+
+<!-- introduce per-page mermaid support -->
+
+
+<!-- introduce mathjax support -->
+<script>
+    function fixes_chrome_anchors() {
+        let chrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+        if (window.location.hash && chrome) {
+            setTimeout(function () {
+                var hash = window.location.hash;
+                window.location.hash = "";
+                window.location.hash = hash;
+            }, 300);
+        }
+    }
+
+    if (document.readyState === "loading") {
+        // Loading hasn't finished yet
+        document.addEventListener("DOMContentLoaded", fixes_chrome_anchors);
+    } else {
+        // `DOMContentLoaded` has already fired
+        fixes_chrome_anchors();
+    }
+</script>
+
+<!------上一頁與下一頁 start---------->
+                    
+                    
+                    
+                    
+    
+                    
+                        
+                        <a href="/pages/android/old/google_sign_in" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Google Sign-In">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                    
+
+                    
+                        
+                        <a href="/pages/android/old/theme_change" class="navigation navigation-next navigation-unique" aria-label="Next page: Theme Change">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    
+                    <!------上一頁與下一頁 end---------->
+                </div>
+            </div>
+
+            <script>
+            var gitbook = gitbook || [];
+            gitbook.push(function() {
+                gitbook.page.hasChanged({
+    "page": {
+        "title": "Introduction",
+        "level": "1.1",
+        "depth": 1,
+        
+        "next": {
+            "title": "Security圖表存取資料庫的方式",
+            "level": "1.2",
+            "depth": 1,
+            "path": "_pages/android/old/char.md",
+            "ref": "_pages/android/old/char.md",
+            "articles": []
+        },
+        
+        "dir": "ltr"
+    },    "config": {
+        "plugins": ["fontsettings", "highlight", "livereload", "lunr", "search", "sharing", "theme-default", "livereload"],
+        "styles": {
+            "ebook": "styles/ebook.css",
+            "epub": "styles/epub.css",
+            "mobi": "styles/mobi.css",
+            "pdf": "styles/pdf.css",
+            "print": "styles/print.css",
+            "website": "styles/website.css"
+        },
+        "pluginsConfig": {
+            "expandable-chapter-small2": {
+                "articlesExpand": true,
+            },
+            "fontsettings": {
+                "family": "sans",
+                "size": 2,
+                "theme": "white"
+            },
+            "highlight": {},
+            "livereload": {},
+            "lunr": {
+                "ignoreSpecialCharacters": false,
+                "maxIndexSize": 1000000
+            },
+            "search": {},            "sharing": {
+                "facebook": true,
+
+                "google": false,
+
+                "github": true,
+              
+                "github_link": "https://github.com",
+              
+
+                "telegram": false,
+                "telegram_link": "https://t.me",
+
+                "instapaper": false,
+
+                "twitter": true,
+              
+
+                "vk": false,
+
+                "weibo": false,
+
+                "all": ["facebook", "google", "twitter", "weibo", "instapaper", "github", "telegram"]
+            },
+"theme-default": {
+                "showLevel": false,
+                "styles": {
+                    "ebook": "styles/ebook.css",
+                    "epub": "styles/epub.css",
+                    "mobi": "styles/mobi.css",
+                    "pdf": "styles/pdf.css",
+                    "print": "styles/print.css",
+                    "website": "styles/website.css"
+                }
+            },
+        },
+        "theme": "default",
+        "author": "Tao He",
+        "pdf": {
+            "pageNumbers": true,
+            "fontSize": 12,
+            "fontFamily": "Arial",
+            "paperSize": "a4",
+            "chapterMark": "pagebreak",
+            "pageBreaksBefore": "/",
+            "margin": {
+                "right": 62,
+                "left": 62,
+                "top": 56,
+                "bottom": 56
+            }
+        },
+        "structure": {
+            "langs": "LANGS.md",
+            "readme": "README.md",
+        },
+        "variables": {},
+        "title": "old",
+        "language": "en",
+        "gitbook": "*"
+    },
+    "file": {
+        "path": "_pages/android/old/app_purchase.md",
+        "mtime": "2023-05-29 00:00:00 +0800",
+        "type": "markdown"
+    },
+    "gitbook": {
+        "version": "",
+        "time": "2025-04-10 13:53:58 +0800"
+    },
+    "basePath": "",
+    "book": {
+        "language": ""
+    }
+});
+            });
+            </script>
+        </div><script src="/assets/gitbook/gitbook.js"></script>
+<script src="/assets/gitbook/theme.js"></script>
+
+<script src="/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-expandable-chapters-small2/expandable-chapters-small.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-search-pro/search.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-sharing/buttons.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-splitter/splitter.js"></script>
+
+<!--
+<script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+<script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+<script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+<script src="../gitbook/gitbook-plugin-search/search.js"></script>
+-->
+
+<script src="/assets/gitbook/custom.js"></script>
+<script src="/assets/gitbook/custom-local.js"></script>
+
+<!-- 有extra_footer_js--><!-- 進入for--><script src="/assets/js/side_bar.js"></script></body>
+</html>

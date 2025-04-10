@@ -1,0 +1,21 @@
+{% comment %}
+ {% for collection in site.collections %} 
+ 	<p>{{ collection.label }}</p>
+	{% if collection.output %}
+    	{% if collection.label == "posts" %}
+
+		{% else %}
+                {% assign reversed_posts = site[collection.label] %}
+                {% for post in reversed_posts %}
+	        		{{ post.url }}<br/>
+        		{% endfor %}
+        {% endif %}
+    {% endif %}
+{% endfor %}
+
+{% assign key = page.prePage %}
+{% assign objs =  site.pages  %}
+{% for p in objs %}
+    {{ p.path }}<br/>
+{% endfor %}
+{% endcomment %}

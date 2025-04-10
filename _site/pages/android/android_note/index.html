@@ -1,0 +1,529 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+<meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>Android note </title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="Cici's old notebook."><meta name="keywords" content="Android," /><meta name="seo" content="no seo" /><link rel="stylesheet" href="/assets/gitbook/style.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-expandable-chapters-small2/expandable-chapters-small.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-fontsettings/website.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-search-pro/search.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-splitter/splitter.css">
+
+<link rel="stylesheet" href="/assets/gitbook/rouge/base16.css">
+
+<link rel="stylesheet" href="/assets/gitbook/custom.css">
+<link rel="stylesheet" href="/assets/gitbook/custom-local.css">
+<meta name="google-site-verification" content="65zgvtfJFNDdKge0tDpfLKShsOrANSZ0hsdp1prfxzs" />
+<meta name="HandheldFriendly" content="true"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/assets/gitbook/images/apple-touch-icon-precomposed-152.png">
+<link rel="shortcut icon" href="/" type="image/x-icon">
+
+<link rel="stylesheet" href="/assets/custom_css/code1.css"><link rel="stylesheet" href="/assets/custom_css/native.css"></head>
+    <body>
+        <div class="book">
+            
+            <div class="book-summary">
+    <nav role="navigation">
+        <div id="book-search-input" role="search">
+            <input type="text" placeholder="Type to search" />
+        </div>
+        <div id="book-search-input-link" role="search">
+            <a href="/assets/search.html">Click to Search</a>
+        </div>
+        <ul class="summary">
+            <li class="chapter active" data-level="1.1" data-path="" data-nav-item>
+                <a href="http://localhost:4000" data-nav-link>
+                    old
+                </a>
+            </li>
+            <li class="divider"></li>
+            <!-- path =  -->
+            
+            
+	
+	
+	<li class="chapter" data-level="1.1" data-path="http://localhost:4000" data-nav-item><a href="#" data-nav-link> Android </a><ul>
+	
+	
+	<li class="chapter" data-level="1.2" data-path="http://localhost:4000" data-nav-item><a href="#" data-nav-link> thread </a><ul>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/android_thread/" data-nav-link> Android thread</a>
+        </li></ul></li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/kdoc/" data-nav-link> kdoc</a>
+        </li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/adb/" data-nav-link> ADB</a>
+        </li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/intellij_coroutine/" data-nav-link> Intellij 安裝Coroutine</a>
+        </li>
+	
+	
+	<li class="chapter" data-level="1.2" data-path="http://localhost:4000" data-nav-item><a href="#" data-nav-link> 舊的技術 </a><ul>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/old/app_update/" data-nav-link> app update</a>
+        </li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/old/google_sign_in/" data-nav-link> Google Sign-In</a>
+        </li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/old/app_purchase/" data-nav-link> In App Purchase Flow</a>
+        </li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/old/theme_change/" data-nav-link> Theme Change</a>
+        </li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/old/chrome_tabs/" data-nav-link> Chrome Custom Tabs</a>
+        </li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/old/momery_leak/" data-nav-link> Handle Memory Leak</a>
+        </li></ul></li>
+	
+	
+	<li class="chapter" data-level="1.2" data-path="http://localhost:4000" data-nav-item><a href="#" data-nav-link> error </a><ul>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/kapt_err/" data-nav-link> kaptGenerateStubsDebugKotlin task (current target is 17) jvm target</a>
+        </li></ul></li></ul></li></ul>
+    </nav>
+</div>
+            <div class="book-body">
+                <div class="book-header" role="navigation">
+                    <!-- Title -->
+                    <h1>
+                        <i class="fa fa-circle-o-notch fa-spin"></i>
+                        
+                            <a href="." >Android note</a>
+                        
+                    </h1>
+                </div>
+
+                <div class="body-inner"><div class="page-wrapper" tabindex="-1" role="main">
+    
+
+    <div class="page-inner">
+        <div id="book-search-results">
+            <div class="search-noresults">
+                <section class="normal markdown-section">
+                    
+                        <h1 id="/pages/android/android_note">Android note</h1>
+                    
+
+                    <p>取得TAG
+MainActivity.class.getSimpleName()</p>
+
+<p>alt+F7 Find usage
+shit二次尋找</p>
+
+<p>網路測試</p>
+
+<figure class="highlight">
+  <pre><code class="language-java" data-lang="java"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+</pre></td><td class="code"><pre><span class="kd">private</span> <span class="kd">class</span> <span class="nc">NetworkTestTask</span> <span class="kd">extends</span> <span class="nc">AsyncTask</span><span class="o">&lt;</span><span class="nc">Void</span><span class="o">,</span> <span class="nc">Void</span><span class="o">,</span> <span class="nc">Boolean</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">protected</span> <span class="nc">Boolean</span> <span class="nf">doInBackground</span><span class="o">(</span><span class="nc">Void</span><span class="o">...</span> <span class="n">voids</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">try</span> <span class="o">(</span><span class="nc">Socket</span> <span class="n">socket</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Socket</span><span class="o">(</span><span class="s">"localhost"</span><span class="o">,</span> <span class="mi">8555</span><span class="o">))</span> <span class="o">{</span>
+            <span class="nc">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="s">"NETWORK"</span><span class="o">,</span> <span class="s">"模拟器网络正常"</span><span class="o">);</span>
+            <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+            <span class="nc">Log</span><span class="o">.</span><span class="na">e</span><span class="o">(</span><span class="s">"NETWORK"</span><span class="o">,</span> <span class="s">"模拟器无法访问RTSP端口: "</span> <span class="o">+</span> <span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+            <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onPostExecute</span><span class="o">(</span><span class="nc">Boolean</span> <span class="n">success</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">success</span><span class="o">)</span> <span class="o">{</span>
+            <span class="nc">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="nc">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">,</span> <span class="s">"网络测试通过"</span><span class="o">,</span> <span class="nc">Toast</span><span class="o">.</span><span class="na">LENGTH_SHORT</span><span class="o">).</span><span class="na">show</span><span class="o">();</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="nc">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="nc">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">,</span> <span class="s">"网络测试失败"</span><span class="o">,</span> <span class="nc">Toast</span><span class="o">.</span><span class="na">LENGTH_SHORT</span><span class="o">).</span><span class="na">show</span><span class="o">();</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></td></tr></tbody></table></code></pre>
+</figure>
+
+<p>// 在 onCreate() 中调用
+new NetworkTestTask().execute();</p>
+
+<figure class="highlight">
+  <pre><code class="language-java" data-lang="java"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="code"><pre><span class="k">new</span> <span class="nc">Thread</span><span class="o">(()</span> <span class="o">-&gt;</span> <span class="o">{</span>
+    <span class="k">try</span> <span class="o">(</span><span class="nc">Socket</span> <span class="n">socket</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Socket</span><span class="o">(</span><span class="s">"localhost"</span><span class="o">,</span> <span class="mi">8555</span><span class="o">))</span> <span class="o">{</span>
+        <span class="nc">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="s">"NETWORK"</span><span class="o">,</span> <span class="s">"模拟器网络正常"</span><span class="o">);</span>
+        <span class="n">runOnUiThread</span><span class="o">(()</span> <span class="o">-&gt;</span> <span class="nc">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="nc">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">,</span> <span class="s">"网络正常"</span><span class="o">,</span> <span class="nc">Toast</span><span class="o">.</span><span class="na">LENGTH_SHORT</span><span class="o">).</span><span class="na">show</span><span class="o">());</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Log</span><span class="o">.</span><span class="na">e</span><span class="o">(</span><span class="s">"NETWORK"</span><span class="o">,</span> <span class="s">"模拟器无法访问RTSP端口: "</span> <span class="o">+</span> <span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+        <span class="n">runOnUiThread</span><span class="o">(()</span> <span class="o">-&gt;</span> <span class="nc">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="nc">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">,</span> <span class="s">"网络失败: "</span> <span class="o">+</span> <span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">(),</span> <span class="nc">Toast</span><span class="o">.</span><span class="na">LENGTH_SHORT</span><span class="o">).</span><span class="na">show</span><span class="o">());</span>
+    <span class="o">}</span>
+<span class="o">}).</span><span class="na">start</span><span class="o">();</span>
+</pre></td></tr></tbody></table></code></pre>
+</figure>
+
+<p>// 1. 添加依赖（build.gradle）
+implementation “org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4”</p>
+
+<p>// 2. 在 Activity 中使用</p>
+
+<figure class="highlight">
+  <pre><code class="language-java" data-lang="java"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="code"><pre><span class="n">lifecycleScope</span><span class="o">.</span><span class="na">launch</span><span class="o">(</span><span class="nc">Dispatchers</span><span class="o">.</span><span class="na">IO</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">try</span> <span class="o">{</span>
+        <span class="nc">Socket</span><span class="o">(</span><span class="s">"localhost"</span><span class="o">,</span> <span class="mi">8555</span><span class="o">).</span><span class="na">use</span> <span class="o">{</span> <span class="n">socket</span> <span class="o">-&gt;</span>
+            <span class="n">withContext</span><span class="o">(</span><span class="nc">Dispatchers</span><span class="o">.</span><span class="na">Main</span><span class="o">)</span> <span class="o">{</span>
+                <span class="nc">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="k">this</span><span class="nd">@MainActivity</span><span class="o">,</span> <span class="s">"网络正常"</span><span class="o">,</span> <span class="nc">Toast</span><span class="o">.</span><span class="na">LENGTH_SHORT</span><span class="o">).</span><span class="na">show</span><span class="o">()</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nl">e:</span> <span class="nc">IOException</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">withContext</span><span class="o">(</span><span class="nc">Dispatchers</span><span class="o">.</span><span class="na">Main</span><span class="o">)</span> <span class="o">{</span>
+            <span class="nc">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="k">this</span><span class="nd">@MainActivity</span><span class="o">,</span> <span class="s">"网络失败: ${e.message}"</span><span class="o">,</span> <span class="nc">Toast</span><span class="o">.</span><span class="na">LENGTH_SHORT</span><span class="o">).</span><span class="na">show</span><span class="o">()</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></td></tr></tbody></table></code></pre>
+</figure>
+
+<p>與 Native (C/C++) 互動時</p>
+
+<p>在 NDK 開發中，當 C/C++ 需要通知 Java 層更新 UI，通常會透過 JNI 呼叫 Java 方法，而 Handler 可以幫助你在 UI Thread 上執行更新。</p>
+
+<p>Looper 和 MessageQueue 的運作機制</p>
+
+<p>如果你的應用程式中有 長時間運行的 Thread，例如 自訂的背景執行緒，你可能需要讓該執行緒擁有自己的 Looper 來處理訊息，這時候 Handler 就很有用。</p>
+
+<p>HandlerThread</p>
+
+<p>如果你想要在單獨的背景執行緒處理特定的工作，但不想要每次都創建新執行緒，HandlerThread 是很好的選擇。這在影像處理、音訊處理或某些與 NDK 相關的計算 時可能會派上用場。</p>
+
+<p>不過，如果你的目標是寫現代化的 Android 應用程式，而不是處理 NDK 或特殊場景，那麼建議你 優先學習 Kotlin Coroutines，因為它的可讀性更高，而且能更簡潔地處理異步操作。</p>
+
+<p>runOnUiThread() 與 new Handler().post() 的區別
+這兩種方法都是在 Android 中將代碼切換到主線程(UI 線程)執行的方法，但它們有一些重要區別：</p>
+
+<p>主要區別
+所屬類別不同</p>
+
+<p>runOnUiThread() 是 Activity 類的方法</p>
+
+<p>new Handler().post() 是 Handler 類的方法</p>
+
+<p>當前線程檢查</p>
+
+<p>runOnUiThread() 會先檢查當前是否已在 UI 線程，如果是則直接執行，否則通過 Handler 發送到 UI 線程</p>
+
+<p>new Handler().post() 總是將 Runnable 發送到消息隊列，即使當前已在 UI 線程</p>
+
+<p>使用場景</p>
+
+<p>runOnUiThread() 通常在 Activity 或 Fragment 中使用更方便</p>
+
+<p>new Handler().post() 可以在任何有 Context 的地方使用</p>
+
+<p>性能考量
+如果已經在 UI 線程，runOnUiThread() 會直接執行而不通過消息隊列，效率更高</p>
+
+<p>new Handler().post() 總是通過消息隊列，即使已在 UI 線程</p>
+
+<p>示例代碼
+java
+复制
+// runOnUiThread() 用法
+runOnUiThread(new Runnable() {
+    @Override
+    public void run() {
+        // 更新 UI
+    }
+});</p>
+
+<p>// Handler.post() 用法
+new Handler(Looper.getMainLooper()).post(new Runnable() {
+    @Override
+    public void run() {
+        // 更新 UI
+    }
+});
+選擇建議
+在 Activity 或 Fragment 中優先使用 runOnUiThread()，因為更簡潔且可能更高效</p>
+
+<p>在非 Activity 類中或需要更精確控制時使用 Handler.post()</p>
+
+<p>如果代碼可能在 UI 線程或非 UI 線程運行，runOnUiThread() 是更好的選擇</p>
+</section>
+            </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div></div>
+    </div>
+</div>
+
+<!-- introduce mathjax support -->
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [ ['$', '$'], ['\\(', '\\)'] ]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script
+  type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+
+<!-- introduce per-page mermaid support -->
+
+
+<!-- introduce mathjax support -->
+<script>
+    function fixes_chrome_anchors() {
+        let chrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+        if (window.location.hash && chrome) {
+            setTimeout(function () {
+                var hash = window.location.hash;
+                window.location.hash = "";
+                window.location.hash = hash;
+            }, 300);
+        }
+    }
+
+    if (document.readyState === "loading") {
+        // Loading hasn't finished yet
+        document.addEventListener("DOMContentLoaded", fixes_chrome_anchors);
+    } else {
+        // `DOMContentLoaded` has already fired
+        fixes_chrome_anchors();
+    }
+</script>
+
+<!------上一頁與下一頁 start---------->
+                    
+                    
+                    
+                    
+    
+                    
+
+                    
+                    <!------上一頁與下一頁 end---------->
+                </div>
+            </div>
+
+            <script>
+            var gitbook = gitbook || [];
+            gitbook.push(function() {
+                gitbook.page.hasChanged({
+    "page": {
+        "title": "Introduction",
+        "level": "1.1",
+        "depth": 1,
+        
+        "next": {
+            "title": "kaptGenerateStubsDebugKotlin task (current target is 17) jvm target",
+            "level": "1.2",
+            "depth": 1,
+            "path": "_pages/android/kapt_err.md",
+            "ref": "_pages/android/kapt_err.md",
+            "articles": []
+        },
+        
+        "dir": "ltr"
+    },    "config": {
+        "plugins": ["fontsettings", "highlight", "livereload", "lunr", "search", "sharing", "theme-default", "livereload"],
+        "styles": {
+            "ebook": "styles/ebook.css",
+            "epub": "styles/epub.css",
+            "mobi": "styles/mobi.css",
+            "pdf": "styles/pdf.css",
+            "print": "styles/print.css",
+            "website": "styles/website.css"
+        },
+        "pluginsConfig": {
+            "expandable-chapter-small2": {
+                "articlesExpand": true,
+            },
+            "fontsettings": {
+                "family": "sans",
+                "size": 2,
+                "theme": "white"
+            },
+            "highlight": {},
+            "livereload": {},
+            "lunr": {
+                "ignoreSpecialCharacters": false,
+                "maxIndexSize": 1000000
+            },
+            "search": {},            "sharing": {
+                "facebook": true,
+
+                "google": false,
+
+                "github": true,
+              
+                "github_link": "https://github.com",
+              
+
+                "telegram": false,
+                "telegram_link": "https://t.me",
+
+                "instapaper": false,
+
+                "twitter": true,
+              
+
+                "vk": false,
+
+                "weibo": false,
+
+                "all": ["facebook", "google", "twitter", "weibo", "instapaper", "github", "telegram"]
+            },
+"theme-default": {
+                "showLevel": false,
+                "styles": {
+                    "ebook": "styles/ebook.css",
+                    "epub": "styles/epub.css",
+                    "mobi": "styles/mobi.css",
+                    "pdf": "styles/pdf.css",
+                    "print": "styles/print.css",
+                    "website": "styles/website.css"
+                }
+            },
+        },
+        "theme": "default",
+        "author": "Tao He",
+        "pdf": {
+            "pageNumbers": true,
+            "fontSize": 12,
+            "fontFamily": "Arial",
+            "paperSize": "a4",
+            "chapterMark": "pagebreak",
+            "pageBreaksBefore": "/",
+            "margin": {
+                "right": 62,
+                "left": 62,
+                "top": 56,
+                "bottom": 56
+            }
+        },
+        "structure": {
+            "langs": "LANGS.md",
+            "readme": "README.md",
+        },
+        "variables": {},
+        "title": "old",
+        "language": "en",
+        "gitbook": "*"
+    },
+    "file": {
+        "path": "_pages/android/android_note.md",
+        "mtime": "2025-04-06 00:00:00 +0800",
+        "type": "markdown"
+    },
+    "gitbook": {
+        "version": "",
+        "time": "2025-04-10 13:53:58 +0800"
+    },
+    "basePath": "",
+    "book": {
+        "language": ""
+    }
+});
+            });
+            </script>
+        </div><script src="/assets/gitbook/gitbook.js"></script>
+<script src="/assets/gitbook/theme.js"></script>
+
+<script src="/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-expandable-chapters-small2/expandable-chapters-small.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-search-pro/search.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-sharing/buttons.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-splitter/splitter.js"></script>
+
+<!--
+<script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+<script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+<script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+<script src="../gitbook/gitbook-plugin-search/search.js"></script>
+-->
+
+<script src="/assets/gitbook/custom.js"></script>
+<script src="/assets/gitbook/custom-local.js"></script>
+
+<!-- 有extra_footer_js--><!-- 進入for--><script src="/assets/js/side_bar.js"></script></body>
+</html>

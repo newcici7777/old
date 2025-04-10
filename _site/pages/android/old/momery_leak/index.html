@@ -1,0 +1,456 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+<meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>Handle Memory Leak </title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="Cici's old notebook."><meta name="keywords" content="android,Handle Memory Leak" /><meta name="seo" content="no seo" /><link rel="stylesheet" href="/assets/gitbook/style.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-expandable-chapters-small2/expandable-chapters-small.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-fontsettings/website.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-search-pro/search.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-splitter/splitter.css">
+
+<link rel="stylesheet" href="/assets/gitbook/rouge/base16.css">
+
+<link rel="stylesheet" href="/assets/gitbook/custom.css">
+<link rel="stylesheet" href="/assets/gitbook/custom-local.css">
+<meta name="google-site-verification" content="65zgvtfJFNDdKge0tDpfLKShsOrANSZ0hsdp1prfxzs" />
+<meta name="HandheldFriendly" content="true"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/assets/gitbook/images/apple-touch-icon-precomposed-152.png">
+<link rel="shortcut icon" href="/" type="image/x-icon">
+
+<link rel="stylesheet" href="/assets/custom_css/code1.css"><link rel="stylesheet" href="/assets/custom_css/native.css"></head>
+    <body>
+        <div class="book">
+            
+            <div class="book-summary">
+    <nav role="navigation">
+        <div id="book-search-input" role="search">
+            <input type="text" placeholder="Type to search" />
+        </div>
+        <div id="book-search-input-link" role="search">
+            <a href="/assets/search.html">Click to Search</a>
+        </div>
+        <ul class="summary">
+            <li class="chapter active" data-level="1.1" data-path="" data-nav-item>
+                <a href="http://localhost:4000" data-nav-link>
+                    old
+                </a>
+            </li>
+            <li class="divider"></li>
+            <!-- path =  -->
+            
+            
+	
+	
+	<li class="chapter" data-level="1.1" data-path="http://localhost:4000" data-nav-item><a href="#" data-nav-link> Android </a><ul>
+	
+	
+	<li class="chapter" data-level="1.2" data-path="http://localhost:4000" data-nav-item><a href="#" data-nav-link> thread </a><ul>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/android_thread/" data-nav-link> Android thread</a>
+        </li></ul></li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/kdoc/" data-nav-link> kdoc</a>
+        </li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/adb/" data-nav-link> ADB</a>
+        </li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/intellij_coroutine/" data-nav-link> Intellij 安裝Coroutine</a>
+        </li>
+	
+	
+	<li class="chapter" data-level="1.2" data-path="http://localhost:4000" data-nav-item><a href="#" data-nav-link> 舊的技術 </a><ul>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/old/app_update/" data-nav-link> app update</a>
+        </li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/old/google_sign_in/" data-nav-link> Google Sign-In</a>
+        </li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/old/app_purchase/" data-nav-link> In App Purchase Flow</a>
+        </li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/old/theme_change/" data-nav-link> Theme Change</a>
+        </li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/old/chrome_tabs/" data-nav-link> Chrome Custom Tabs</a>
+        </li>
+	
+	
+	<li class="active" data-nav-item>
+    	<a href="/pages/android/old/momery_leak/" data-nav-link> Handle Memory Leak</a>
+        </li></ul></li>
+	
+	
+	<li class="chapter" data-level="1.2" data-path="http://localhost:4000" data-nav-item><a href="#" data-nav-link> error </a><ul>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/kapt_err/" data-nav-link> kaptGenerateStubsDebugKotlin task (current target is 17) jvm target</a>
+        </li></ul></li></ul></li></ul>
+    </nav>
+</div>
+            <div class="book-body">
+                <div class="book-header" role="navigation">
+                    <!-- Title -->
+                    <h1>
+                        <i class="fa fa-circle-o-notch fa-spin"></i>
+                        
+                            <a href="." >Handle Memory Leak</a>
+                        
+                    </h1>
+                </div>
+
+                <div class="body-inner"><div class="page-wrapper" tabindex="-1" role="main">
+    
+
+    <div class="page-inner">
+        <div id="book-search-results">
+            <div class="search-noresults">
+                <section class="normal markdown-section">
+                    
+                        <h1 id="/pages/android/old/momery_leak">Handle Memory Leak</h1>
+                    
+
+                    <p>偵測memory leak的工具<br />
+LeakCanary<br />
+Eclipse MAT<br />
+Android Studio Profiler</p>
+
+<p>參考以下篇章修改防止momery leak洩漏。<br />
+<a href="https://android.jlelse.eu/9-ways-to-avoid-memory-leaks-in-android-b6d81648e35e">https://android.jlelse.eu/9-ways-to-avoid-memory-leaks-in-android-b6d81648e35e</a>
+<a href="https://www.jianshu.com/p/4036a7a84296">https://www.jianshu.com/p/4036a7a84296</a>
+<img src="/assets/img/android/old/memory_leak1.png" alt="img" /><br />
+<img src="/assets/img/android/old/memory_leak2.png" alt="img" /><br />
+<img src="/assets/img/android/old/memory_leak3.png" alt="img" /><br />
+<img src="/assets/img/android/old/memory_leak4.png" alt="img" /><br />
+<img src="/assets/img/android/old/memory_leak5.png" alt="img" /><br />
+<img src="/assets/img/android/old/memory_leak6.png" alt="img" /><br />
+<img src="/assets/img/android/old/memory_leak7.png" alt="img" /><br />
+<img src="/assets/img/android/old/memory_leak8.png" alt="img" /><br />
+<img src="/assets/img/android/old/memory_leak9.png" alt="img" /><br />
+<img src="/assets/img/android/old/memory_leak10.png" alt="img" /><br />
+Memory leak的觸發點<br />
+<img src="/assets/img/android/old/memory_leak11.png" alt="img" /><br />
+AiShield ShowLoadingView<br />
+建立一個PopWindowHandler<br />
+<img src="/assets/img/android/old/memory_leak12.png" alt="img" /> 
+OnCreate 
+<img src="/assets/img/android/old/memory_leak13.png" alt="img" /><br />
+<img src="/assets/img/android/old/memory_leak14.png" alt="img" /><br />
+initPopupWindow
+<img src="/assets/img/android/old/memory_leak15.png" alt="img" /><br />
+<img src="/assets/img/android/old/memory_leak16.png" alt="img" /><br />
+Destroy<br />
+removeCallbacksAndMessages,參考此篇<a href="http://lp43.blogspot.com/2011/11/memory-leak-drawable.html">http://lp43.blogspot.com/2011/11/memory-leak-drawable.html</a>
+<img src="/assets/img/android/old/memory_leak17.png" alt="img" /><br />
+<img src="/assets/img/android/old/memory_leak18.png" alt="img" /><br />
+Eclipse MAT
+參考文章：<a href="https://blog.csdn.net/CrazyMo_/article/details/80214205">https://blog.csdn.net/CrazyMo_/article/details/80214205</a>
+<img src="/assets/img/android/old/memory_leak19.png" alt="img" /><br />
+<img src="/assets/img/android/old/memory_leak20.png" alt="img" /><br />
+<img src="/assets/img/android/old/memory_leak21.png" alt="img" /><br />
+<img src="/assets/img/android/old/memory_leak22.png" alt="img" /><br />
+<img src="/assets/img/android/old/memory_leak23.png" alt="img" /><br />
+<img src="/assets/img/android/old/memory_leak24.png" alt="img" /><br />
+無法克服的memoryLeak
+1.OkHttp(因為用匿名)
+<img src="/assets/img/android/old/memory_leak25.png" alt="img" /><br />
+<img src="/assets/img/android/old/memory_leak26.png" alt="img" /><br />
+2.Service LocalBinder
+<a href="https://stackoverflow.com/questions/6733538/memory-leaks-found-when-local-binder-has-a-reference-to-service">https://stackoverflow.com/questions/6733538/memory-leaks-found-when-local-binder-has-a-reference-to-service</a>
+<a href="https://stackoverflow.com/questions/7976322/binder-preventing-garbage-collection">https://stackoverflow.com/questions/7976322/binder-preventing-garbage-collection</a></p>
+
+<p>3.Singleton 宣告static
+<img src="/assets/img/android/old/memory_leak27.png" alt="img" /><br />
+參考：<a href="http://hant.ask.helplib.com/java/post_5038000">http://hant.ask.helplib.com/java/post_5038000</a>
+<img src="/assets/img/android/old/memory_leak28.png" alt="img" />
+目前作法在GetEndDevicePrecenter中增加destroy()
+<img src="/assets/img/android/old/memory_leak29.png" alt="img" /><br />
+其它引用GetEndDevicePrecenter<br />
+記得在onResume   去呼叫建立<br />
+onPause 去呼叫destroy()<br />
+<img src="/assets/img/android/old/memory_leak30.png" alt="img" /><br />
+參考文章
+<img src="/assets/img/android/old/memory_leak31.png" alt="img" /><br />
+<a href="https://stackoverflow.com/questions/34409549/release-memory-of-particular-activity-when-it-is-destroyed">https://stackoverflow.com/questions/34409549/release-memory-of-particular-activity-when-it-is-destroyed</a>
+<img src="/assets/img/android/old/memory_leak32.png" alt="img" /><br />
+Bitmap的recycle
+<img src="/assets/img/android/old/memory_leak33.png" alt="img" /><br />
+Android的強迫Garbage Collector方式<br />
+<img src="/assets/img/android/old/memory_leak34.png" alt="img" /> <br />
+<img src="/assets/img/android/old/memory_leak35.png" alt="img" /> 
+最後 
+<img src="/assets/img/android/old/memory_leak36.png" alt="img" /><br />
+<img src="/assets/img/android/old/memory_leak37.png" alt="img" /> 
+<img src="/assets/img/android/old/memory_leak38.png" alt="img" /></p>
+
+<p>其它資料
+<img src="/assets/img/android/old/memory_leak39.png" alt="img" /><br />
+AsyncTask,Handler,Thread,TimerTask,CountDownTimer,<br />
+<img src="/assets/img/android/old/memory_leak40.png" alt="img" /> <br />
+<img src="/assets/img/android/old/memory_leak41.png" alt="img" /><br />
+<a href="https://www.youtube.com/watch?v=RqyF7qzA4qc&amp;list=LL5DL2LYd3m82-JE01-VhfBw&amp;index=4&amp;t=0s">https://www.youtube.com/watch?v=RqyF7qzA4qc&amp;list=LL5DL2LYd3m82-JE01-VhfBw&amp;index=4&amp;t=0s</a><br />
+<img src="/assets/img/android/old/memory_leak42.png" alt="img" /></p>
+
+<p>參考連結:
+<a href="https://www.jianshu.com/p/c5ac51d804fa">https://www.jianshu.com/p/c5ac51d804fa</a>
+<a href="https://www.jianshu.com/p/63aead89f3b9">https://www.jianshu.com/p/63aead89f3b9</a>
+<a href="https://www.jianshu.com/p/ac00e370f83d">https://www.jianshu.com/p/ac00e370f83d</a>
+<a href="https://blog.csdn.net/snow4dev/article/details/7555130">https://blog.csdn.net/snow4dev/article/details/7555130</a>
+<a href="https://stackoverflow.com/questions/9809336/android-asyntask-use-weak-reference-for-context-to-avoid-device-rotate-screen/9809870">https://stackoverflow.com/questions/9809336/android-asyntask-use-weak-reference-for-context-to-avoid-device-rotate-screen/9809870</a>
+<a href="http://frankwu-coding.logdown.com/posts/230591-androidhandlermemory-leak">http://frankwu-coding.logdown.com/posts/230591-androidhandlermemory-leak</a>
+<a href="https://instabug.com/blog/how-to-fix-android-memory-leaks/">https://instabug.com/blog/how-to-fix-android-memory-leaks/</a>
+<a href="https://www.androiddesignpatterns.com/2013/01/inner-class-handler-memory-leak.html">https://www.androiddesignpatterns.com/2013/01/inner-class-handler-memory-leak.html</a>
+<a href="https://stackoverflow.com/questions/17778456/static-runnable-in-activity">https://stackoverflow.com/questions/17778456/static-runnable-in-activity</a>
+<a href="https://stackoverflow.com/questions/13891186/static-singleton-lifetime-in-android/13891253#13891253">https://stackoverflow.com/questions/13891186/static-singleton-lifetime-in-android/13891253#13891253</a>
+<a href="https://blog.csdn.net/CrazyMo_/article/details/80214205">https://blog.csdn.net/CrazyMo_/article/details/80214205</a>
+<a href="https://www.jianshu.com/p/ea5278f92173">https://www.jianshu.com/p/ea5278f92173</a>
+<a href="https://juejin.im/post/595615d1f265da6c261d3bc1">https://juejin.im/post/595615d1f265da6c261d3bc1</a>
+<a href="https://juejin.im/post/5955f556f265da6c4e7f5330">https://juejin.im/post/5955f556f265da6c4e7f5330</a></p>
+</section>
+            </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div></div>
+    </div>
+</div>
+
+<!-- introduce mathjax support -->
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [ ['$', '$'], ['\\(', '\\)'] ]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script
+  type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+
+<!-- introduce per-page mermaid support -->
+
+
+<!-- introduce mathjax support -->
+<script>
+    function fixes_chrome_anchors() {
+        let chrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+        if (window.location.hash && chrome) {
+            setTimeout(function () {
+                var hash = window.location.hash;
+                window.location.hash = "";
+                window.location.hash = hash;
+            }, 300);
+        }
+    }
+
+    if (document.readyState === "loading") {
+        // Loading hasn't finished yet
+        document.addEventListener("DOMContentLoaded", fixes_chrome_anchors);
+    } else {
+        // `DOMContentLoaded` has already fired
+        fixes_chrome_anchors();
+    }
+</script>
+
+<!------上一頁與下一頁 start---------->
+                    
+                    
+                    
+                    
+    
+                    
+                        
+                        <a href="/pages/android/old/chrome_tabs" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Chrome Custom Tabs">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                    
+
+                    
+                        
+                        <a href="/pages/android/kapt_err" class="navigation navigation-next navigation-unique" aria-label="Next page: kaptGenerateStubsDebugKotlin task (current target is 17) jvm target">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    
+                    <!------上一頁與下一頁 end---------->
+                </div>
+            </div>
+
+            <script>
+            var gitbook = gitbook || [];
+            gitbook.push(function() {
+                gitbook.page.hasChanged({
+    "page": {
+        "title": "Introduction",
+        "level": "1.1",
+        "depth": 1,
+        
+        "next": {
+            "title": "GET_CYBER_SECURITY_INFO",
+            "level": "1.2",
+            "depth": 1,
+            "path": "_pages/android/old/security_info.md",
+            "ref": "_pages/android/old/security_info.md",
+            "articles": []
+        },
+        
+        "dir": "ltr"
+    },    "config": {
+        "plugins": ["fontsettings", "highlight", "livereload", "lunr", "search", "sharing", "theme-default", "livereload"],
+        "styles": {
+            "ebook": "styles/ebook.css",
+            "epub": "styles/epub.css",
+            "mobi": "styles/mobi.css",
+            "pdf": "styles/pdf.css",
+            "print": "styles/print.css",
+            "website": "styles/website.css"
+        },
+        "pluginsConfig": {
+            "expandable-chapter-small2": {
+                "articlesExpand": true,
+            },
+            "fontsettings": {
+                "family": "sans",
+                "size": 2,
+                "theme": "white"
+            },
+            "highlight": {},
+            "livereload": {},
+            "lunr": {
+                "ignoreSpecialCharacters": false,
+                "maxIndexSize": 1000000
+            },
+            "search": {},            "sharing": {
+                "facebook": true,
+
+                "google": false,
+
+                "github": true,
+              
+                "github_link": "https://github.com",
+              
+
+                "telegram": false,
+                "telegram_link": "https://t.me",
+
+                "instapaper": false,
+
+                "twitter": true,
+              
+
+                "vk": false,
+
+                "weibo": false,
+
+                "all": ["facebook", "google", "twitter", "weibo", "instapaper", "github", "telegram"]
+            },
+"theme-default": {
+                "showLevel": false,
+                "styles": {
+                    "ebook": "styles/ebook.css",
+                    "epub": "styles/epub.css",
+                    "mobi": "styles/mobi.css",
+                    "pdf": "styles/pdf.css",
+                    "print": "styles/print.css",
+                    "website": "styles/website.css"
+                }
+            },
+        },
+        "theme": "default",
+        "author": "Tao He",
+        "pdf": {
+            "pageNumbers": true,
+            "fontSize": 12,
+            "fontFamily": "Arial",
+            "paperSize": "a4",
+            "chapterMark": "pagebreak",
+            "pageBreaksBefore": "/",
+            "margin": {
+                "right": 62,
+                "left": 62,
+                "top": 56,
+                "bottom": 56
+            }
+        },
+        "structure": {
+            "langs": "LANGS.md",
+            "readme": "README.md",
+        },
+        "variables": {},
+        "title": "old",
+        "language": "en",
+        "gitbook": "*"
+    },
+    "file": {
+        "path": "_pages/android/old/momery_leak.md",
+        "mtime": "2025-03-24 00:00:00 +0800",
+        "type": "markdown"
+    },
+    "gitbook": {
+        "version": "",
+        "time": "2025-04-10 13:53:58 +0800"
+    },
+    "basePath": "",
+    "book": {
+        "language": ""
+    }
+});
+            });
+            </script>
+        </div><script src="/assets/gitbook/gitbook.js"></script>
+<script src="/assets/gitbook/theme.js"></script>
+
+<script src="/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-expandable-chapters-small2/expandable-chapters-small.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-search-pro/search.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-sharing/buttons.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-splitter/splitter.js"></script>
+
+<!--
+<script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+<script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+<script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+<script src="../gitbook/gitbook-plugin-search/search.js"></script>
+-->
+
+<script src="/assets/gitbook/custom.js"></script>
+<script src="/assets/gitbook/custom-local.js"></script>
+
+<!-- 有extra_footer_js--><!-- 進入for--><script src="/assets/js/side_bar.js"></script></body>
+</html>

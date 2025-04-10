@@ -1,0 +1,144 @@
+/* 設定程式碼行號的欄位固定寬度10% */
+table.rouge-table td:first-of-type {
+	width: 5%;
+	color: #BEBEBE;/*程式碼行號顏色*/
+}
+
+/* 表格不要有border */
+table.rouge-table td {
+	border: 0px solid transparent;
+	color: #003D79;/*程式碼顏色*/
+}
+
+/* tr不要有背景顏色 */
+table.rouge-table tr {
+    background-color: transparent;
+    border-top: 0px solid transparent;
+}
+/* 程式碼上下左右的margin-bottom大小 */
+table.rouge-table {
+	margin-bottom: 0px;
+}
+
+/* 程式碼上下左右的padding大小 */
+table.rouge-table pre {
+	padding: 0px;
+}
+
+/* 程式碼上下左右的padding大小 */
+table.rouge-table code {
+	padding: 0.25em;
+}
+/* <studio.h> "test.h"  */
+/*括號=  ; */
+/*括號() [] {}; */
+.highlight .o, .highlight .ow ,
+.highlight .p, .highlight .pi ,
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf, .highlight .cs
+{
+	color: #FF5151;
+}
+/*註解*/
+.highlight .c1, .highlight .cm {
+	color: #9D9D9D;
+}
+
+/*private public*/
+/*public private*/
+.highlight .nl,
+.highlight .nc, /*T*/
+.highlight .k /*class*/
+{
+	color: #01B468;
+}
+
+/*背景是黑色的theme*/
+/* <studio.h> "test.h"  */
+/*括號=  ; */
+/*括號() [] {}; */
+.color-theme-2 .highlight .c,
+.color-theme-2 .highlight .ch,
+.color-theme-2 .highlight .cd,
+.color-theme-2 .highlight .cpf,
+.color-theme-2 .highlight .cs,
+.color-theme-2 .highlight .o,
+.color-theme-2 .highlight .ow,
+.color-theme-2 .highlight .p,
+.color-theme-2 .highlight .pi
+{
+	color: #FFDC35;/*淺藍色*/
+}
+
+/*註解*/
+.color-theme-2 .highlight .c1,
+.color-theme-2 .highlight .cm 
+{
+	color: #BEBEBE;
+}
+
+/*public private*/
+.color-theme-2 .highlight .nl,
+.color-theme-2 .highlight .nc, /*T*/
+.color-theme-2 .highlight .k /*class*/
+{
+	color: #00FFFF;
+}
+
+/*背景是黑色的theme的文字*/
+.book.color-theme-2 .book-body .page-wrapper .page-inner section.normal,
+.book.color-theme-2 .book-body .page-wrapper .page-inner section.normal pre,
+.book.color-theme-2 .book-body .page-wrapper .page-inner section.normal code {
+    color: #fff;
+}
+/*背景是黑色的程式碼行號顏色*/
+.book.color-theme-2 .book-body .page-wrapper .page-inner section.normal pre.lineno {
+	color: #BEBEBE;
+}
+/*mark 程式碼，標註的程式碼有瑩光筆的效果*/
+span.markline {
+	background-color: yellow;
+	color: #000000
+}
+
+/* 背景是黑色表格框線顏色 */
+.book.color-theme-2 .book-body .page-wrapper .page-inner section.normal table th, .book.color-theme-2 .book-body .page-wrapper .page-inner section.normal table td {
+    border-color: #606872;
+}
+/* 背景是黑色，客制表格欄位背景顏色 */
+.book.color-theme-2 .book-body .page-wrapper .page-inner section.normal table.custom-table tr {
+  background-color: #2d3143;
+}
+
+/* 背景是黃色，客制表格欄位背景顏色 */
+.book.color-theme-1 .book-body .page-wrapper .page-inner section.normal table.custom-table tr {
+    background-color: #fdf6e3;
+}
+/* 背景是白色，客制表格欄位背景顏色 */
+.markdown-section table.custom-table tr {
+  background-color: #ffffff;
+}
+/* 當前頁面高亮 */
+[data-nav-item].current-page > a {
+    color: #FF5722 !important;
+    font-weight: bold;
+}
+
+/* 展開狀態樣式 */
+[data-nav-item].expanded > a {
+    color: #2196F3;
+}
+
+/* 子目錄縮進 */
+[data-nav-item] ul {
+    padding-left: 15px;
+    display: none;
+}
+
+[data-nav-item].expanded > ul {
+    display: block;
+}
+
+/* 箭頭圖標旋轉 */
+[data-nav-item].expanded > a > .fa {
+    transform: rotate(90deg);
+}

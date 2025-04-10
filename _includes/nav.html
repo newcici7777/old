@@ -1,0 +1,41 @@
+{% assign route = include.path %}
+{%- for item in include.nav -%}
+	{% assign page_url = item.url %}
+	{% assign pageObj =  site.pages | where_exp:"item","item.path == page_url" | first %}
+	{% assign current = "" %}
+	{% if page.path == pageObj.path %}
+		{%assign current = "active" %}
+	{% endif %}
+
+	{%- if item.isChapter -%}
+		<li class="chapter" data-level="1.1" data-path="{{site.url}}" data-nav-item>
+	{%- else -%}
+		{%- if item.subnav -%}
+			<li class="chapter" data-level="1.2" data-path="{{site.url}}" data-nav-item>
+		{%- else -%}
+			<li class="{{current}}" data-nav-item>
+		{%- endif -%}
+	{%- endif -%}
+
+	{%- if item.url -%}
+	    {% assign route = route  | append: pageObj.id | append: ',' %}
+    	<a href="{{pageObj.id | relative_url}}/" data-nav-link> {{ pageObj.title }}</a>
+        {% if site.toc.enabled %}
+            {% if page.url == pageObj.url %}
+                {% include toc.html html=content h_min=2 h_max=3 %}
+            {% endif %}
+        {% endif %}
+	{%- else -%}
+    	<a href="#" data-nav-link> {{ item.title }} </a>
+	{%- endif -%}
+	{% capture path %}{{route}}{% endcapture %}
+	{%- if item.subnav -%}
+		<ul>
+			{%- include nav.html nav=item.subnav path=path  -%}
+		</ul>
+	{%- endif -%}
+	</li>
+{%- endfor -%}
+
+
+

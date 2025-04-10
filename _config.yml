@@ -1,8 +1,44 @@
-title: Jekyll Gitbook
+title: old
 remote_theme: sighingnow/jekyll-gitbook
+collections:
+  pages:
+    output: true
+    permalink: /:collection/:path/
 plugins:
     - jekyll-paginate
     - jekyll-sitemap
     - jekyll-gist
     - jekyll-feed
     - jekyll-include-cache
+
+kramdown:
+  parse_block_html: true
+  parse_span_html: true
+syntax_highlighter_style: base16
+
+#設定預設值
+defaults:
+  - scope:
+      path: "" #所有目錄
+      type: "pages" # _pages目錄下的所有文意
+    values:
+      layout: "post" #預設layout
+      author: "Cici li" #預設作者    
+  - scope:
+      path: "assets/img" #圖片位置設定，參考jekyll static file的設定
+    values:
+      image: true #把assets/img目錄下的所有圖片的image屬性設為true
+
+#baseurl: /blog #網站的目錄
+imgurl: /assets/img
+locale: "zh-TW" # 自己的地區
+description: "Cici's old notebook." # 網站的描述
+url: "https://newcici7777.github.io/old" # 自己部落格的網址
+route: ""
+extra_css: 
+  - assets/custom_css/code1.css # 自己修改程式碼區塊css，不同的theme顯示的程式碼css與文字
+  - assets/custom_css/native.css
+extra_footer_js:
+  - assets/js/side_bar.js
+include:
+  - sitemap.xml

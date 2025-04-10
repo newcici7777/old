@@ -1,0 +1,31 @@
+menu:
+  - title: Android
+    url: 
+    isChapter: true
+    subnav:
+      - title: thread
+        url: 
+        subnav:
+          - url: _pages/android/android_thread.md
+      - url: _pages/android/kdoc.md
+      - url: _pages/android/adb.md
+      - url: _pages/android/intellij_coroutine.md
+      - title: 舊的技術
+        url: 
+        subnav:         
+          - url: _pages/android/old/app_update.md
+          - url: _pages/android/old/google_sign_in.md
+          - url: _pages/android/old/app_purchase.md
+          - url: _pages/android/old/theme_change.md
+          - url: _pages/android/old/chrome_tabs.md
+          - url: _pages/android/old/momery_leak.md
+#          - url: _pages/android/old/char.md
+#          - url: _pages/android/old/thread_warning_list.md          
+#          - url: _pages/android/old/login.md
+#          - url: _pages/android/old/black_white_list.md
+#          - url: _pages/android/old/security_info.md
+#          - url: _pages/android/old/code_share.md
+      - title: error
+        url: 
+        subnav:
+          - url: _pages/android/kapt_err.md      

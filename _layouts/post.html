@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        {%- include head.html -%}
+    </head>
+    <body>
+        <div class="book">
+            {% capture path %}{% endcapture %}
+            {% include sidebar.html path=path %}
+            <div class="book-body">
+                <div class="book-header" role="navigation">
+                    <!-- Title -->
+                    <h1>
+                        <i class="fa fa-circle-o-notch fa-spin"></i>
+                        {% if page.title %}
+                            <a href="." >{{ page.title | escape }}</a>
+                        {% else %}
+                            <a href="." >{{ site.title | escape }}</a>
+                        {% endif %}
+                    </h1>
+                </div>
+
+                <div class="body-inner">
+                    {%- include body.html -%}
+                    <!------上一頁與下一頁 start---------->
+                    {% assign route = path | split:"," %}
+                    {% assign prePage = "" %}
+                    {% assign nextPage = "" %}
+                    {% for p in route %}
+                        {% if page.id == p %}
+                            {% unless forloop.first%}
+                                {% assign preIndex = forloop.index0 | minus: 1 %}
+                                {% assign prePage = route[preIndex] %}
+                            {% endunless %}
+                            {% unless forloop.last%}
+                                {% assign nextIndex = forloop.index0 | plus: 1 %}
+                                {% assign nextPage = route[nextIndex] %}
+                            {% endunless %}
+                        {% endif %}
+                    {% endfor %}
+    
+                    {% if prePage != "" %}
+                        {% assign prePageObj =  site.pages | where_exp:"item","item.id == prePage" | first %}
+                        <a href="{{ prePageObj.id | relative_url }}" class="navigation navigation-prev navigation-unique" aria-label="Previous page: {{prePageObj.title}}">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                    {% endif %}
+
+                    {% if nextPage != "" %}
+                        {% assign nextPageObj =  site.pages | where_exp:"item","item.id == nextPage" | first %}
+                        <a href="{{ nextPageObj.id | relative_url }}" class="navigation navigation-next navigation-unique" aria-label="Next page: {{nextPageObj.title}}">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    {% endif %}
+                    <!------上一頁與下一頁 end---------->
+                </div>
+            </div>
+
+            <script>
+            var gitbook = gitbook || [];
+            gitbook.push(function() {
+                gitbook.page.hasChanged({%- include metadata-post.json.tpl -%});
+            });
+            </script>
+        </div>
+
+        {%- include footer.html -%}
+
+    </body>
+</html>

@@ -1,0 +1,518 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+<meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>Chrome Custom Tabs </title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="Cici's old notebook."><meta name="keywords" content="Android, Chrome Custom Tabs" /><meta name="seo" content="no seo" /><link rel="stylesheet" href="/assets/gitbook/style.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-expandable-chapters-small2/expandable-chapters-small.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-fontsettings/website.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-search-pro/search.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-splitter/splitter.css">
+
+<link rel="stylesheet" href="/assets/gitbook/rouge/base16.css">
+
+<link rel="stylesheet" href="/assets/gitbook/custom.css">
+<link rel="stylesheet" href="/assets/gitbook/custom-local.css">
+<meta name="google-site-verification" content="65zgvtfJFNDdKge0tDpfLKShsOrANSZ0hsdp1prfxzs" />
+<meta name="HandheldFriendly" content="true"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/assets/gitbook/images/apple-touch-icon-precomposed-152.png">
+<link rel="shortcut icon" href="/" type="image/x-icon">
+
+<link rel="stylesheet" href="/assets/custom_css/code1.css"><link rel="stylesheet" href="/assets/custom_css/native.css"></head>
+    <body>
+        <div class="book">
+            
+            <div class="book-summary">
+    <nav role="navigation">
+        <div id="book-search-input" role="search">
+            <input type="text" placeholder="Type to search" />
+        </div>
+        <div id="book-search-input-link" role="search">
+            <a href="/assets/search.html">Click to Search</a>
+        </div>
+        <ul class="summary">
+            <li class="chapter active" data-level="1.1" data-path="" data-nav-item>
+                <a href="http://localhost:4000" data-nav-link>
+                    old
+                </a>
+            </li>
+            <li class="divider"></li>
+            <!-- path =  -->
+            
+            
+	
+	
+	<li class="chapter" data-level="1.1" data-path="http://localhost:4000" data-nav-item><a href="#" data-nav-link> Android </a><ul>
+	
+	
+	<li class="chapter" data-level="1.2" data-path="http://localhost:4000" data-nav-item><a href="#" data-nav-link> thread </a><ul>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/android_thread/" data-nav-link> Android thread</a>
+        </li></ul></li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/kdoc/" data-nav-link> kdoc</a>
+        </li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/adb/" data-nav-link> ADB</a>
+        </li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/intellij_coroutine/" data-nav-link> Intellij 安裝Coroutine</a>
+        </li>
+	
+	
+	<li class="chapter" data-level="1.2" data-path="http://localhost:4000" data-nav-item><a href="#" data-nav-link> 舊的技術 </a><ul>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/old/app_update/" data-nav-link> app update</a>
+        </li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/old/google_sign_in/" data-nav-link> Google Sign-In</a>
+        </li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/old/app_purchase/" data-nav-link> In App Purchase Flow</a>
+        </li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/old/theme_change/" data-nav-link> Theme Change</a>
+        </li>
+	
+	
+	<li class="active" data-nav-item>
+    	<a href="/pages/android/old/chrome_tabs/" data-nav-link> Chrome Custom Tabs</a>
+        </li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/old/momery_leak/" data-nav-link> Handle Memory Leak</a>
+        </li></ul></li>
+	
+	
+	<li class="chapter" data-level="1.2" data-path="http://localhost:4000" data-nav-item><a href="#" data-nav-link> error </a><ul>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/kapt_err/" data-nav-link> kaptGenerateStubsDebugKotlin task (current target is 17) jvm target</a>
+        </li></ul></li></ul></li></ul>
+    </nav>
+</div>
+            <div class="book-body">
+                <div class="book-header" role="navigation">
+                    <!-- Title -->
+                    <h1>
+                        <i class="fa fa-circle-o-notch fa-spin"></i>
+                        
+                            <a href="." >Chrome Custom Tabs</a>
+                        
+                    </h1>
+                </div>
+
+                <div class="body-inner"><div class="page-wrapper" tabindex="-1" role="main">
+    
+
+    <div class="page-inner">
+        <div id="book-search-results">
+            <div class="search-noresults">
+                <section class="normal markdown-section">
+                    
+                        <h1 id="/pages/android/old/chrome_tabs">Chrome Custom Tabs</h1>
+                    
+
+                    <p>Android In-App Web Browser –Chrome Custom Tabs
+Android ChromeCustom Tabs與IOS 比較</p>
+
+<p>相同點：</p>
+<ol>
+  <li>都有網址列</li>
+  <li>都有返回App的按鈕，Android是X，IOS是”完成”</li>
+  <li>Android in-App browser也有像google chrome”加入最愛、下載、歷史…”等等相關功能</li>
+  <li>不用再打開外部瀏覽器</li>
+</ol>
+
+<p>Custom Tabs優點</p>
+<ul>
+  <li>ActionBar（也就是最上面的 Toolbar，網址一欄）的顏色</li>
+  <li>Custom Tab 的進入和退出過場動畫</li>
+  <li>在Custom Tab 的 ActionBar 上添加自定義圖標和菜單</li>
+  <li>自定義返回圖標</li>
+  <li>Custom Tab 可以通過回調接口來通知應用網頁導航的情況</li>
+  <li>性能更好，使用 Custom Tab 來打開網頁的時候，還可以預先加載網頁內容，這樣當打開的時候，用戶感覺非常快。</li>
+  <li>生命週期管理，使用 Custom tab 可以和您的應用綁定一起，當用戶在瀏覽網頁的時候，您的應用也被認為是互動的程序，不會被系統殺死。</li>
+  <li>可以共享 Chrome 瀏覽器的 Cookie ，這樣用戶就不用再登錄一遍網站了。</li>
+  <li>如果用戶開啟了 Chrome 的數據壓縮功能，則一樣可以使用(???)</li>
+  <li>和 Chrome 一樣的自動補全功能(???)</li>
+  <li>只需點擊左上角的返回按鈕一次就可以返回您的應用中了</li>
+  <li>每次用的都是最新版本的 Chrome(會隨著 Chrome 更新)</li>
+</ul>
+
+<p>Custom Tab缺點
+這個組件解決了 Webview 的很多問題，但它有一個關鍵的限制，就是會在頂部有個地址欄顯示 。為什麼要這麼做呢？因為 Chrome Custom Tabs 可能打開任何 Web 頁面，如果全屏顯示，會給用戶錯覺認為 Chrome Custom Tabs 打開的 Web 頁面是當前 Native App 提供的，造成安全問題。地址欄提示了用戶當前是像瀏覽器中一樣在瀏覽一個頁面。</p>
+
+<p>解決Custom Tabs缺點</p>
+
+<p>Trusted Web Activity(2019/02發佈)</p>
+
+<p>更接近 Native App 的使用體驗，而 Chrome Custom Tabs 雖然避免了 Webview 的缺點，但是由於有地址欄，還是一個瀏覽器形式的體驗。這時候就需要用到 Trusted Web Activity了。 TWA(Trusted Web Activity) 是在 Chrome Custom Tabs 的基礎上，使用Digital AssetLinks來對 Web 內容進行鑑權，限制 TWA 中展示的 Web 內容與 Native App 為相同的作者，保證了安全性。它的優點：</p>
+
+<ul>
+  <li>基於 Custom Tabs，會隨 Chrome 自動更新</li>
+  <li>全屏幕，不會顯示地址欄。</li>
+</ul>
+
+<p>Getting Started with Trusted Web Activities
+<a href="https://codelabs.developers.google.com/codelabs/getting-started-with-twas/index.html?index=..%2F..index#0">https://codelabs.developers.google.com/codelabs/getting-started-with-twas/index.html?index=..%2F..index#0</a></p>
+
+<p><img src="/assets/img/android/old/chrome_tabs1.png" alt="img" />
+<img src="/assets/img/android/old/chrome_tabs2.png" alt="img" />
+<img src="/assets/img/android/old/chrome_tabs3.png" alt="img" />
+<img src="/assets/img/android/old/chrome_tabs4.png" alt="img" />
+<img src="/assets/img/android/old/chrome_tabs5.gif" alt="img" /></p>
+
+<p>Chrome Custom Tabs</p>
+
+<p>官方提供的Sample Code
+<a href="https://github.com/GoogleChrome/custom-tabs-client">https://github.com/GoogleChrome/custom-tabs-client</a></p>
+
+<p>首先在gradle的dependencies加上</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>implementation 'com.android.support:customtabs:28.0.0'
+</code></pre></div></div>
+
+<p>啟動Chrome Custom Tabs</p>
+
+<figure class="highlight">
+  <pre><code class="language-java" data-lang="java"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="code"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="nc">AppCompatActivity</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="nc">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
+        <span class="n">setContentView</span><span class="o">(</span><span class="no">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_main</span><span class="o">);</span>
+        <span class="nc">CustomTabsIntent</span><span class="o">.</span><span class="na">Builder</span> <span class="n">intentBuilder</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">CustomTabsIntent</span><span class="o">.</span><span class="na">Builder</span><span class="o">();</span>
+        <span class="n">intentBuilder</span><span class="o">.</span><span class="na">build</span><span class="o">().</span><span class="na">launchUrl</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="nc">Uri</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="s">"https://paul.kinlan.me/"</span><span class="o">));</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></td></tr></tbody></table></code></pre>
+</figure>
+
+<p>Toolbar增加顏色</p>
+
+<figure class="highlight">
+  <pre><code class="language-java" data-lang="java"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="code"><pre><span class="nc">CustomTabsIntent</span><span class="o">.</span><span class="na">Builder</span> <span class="n">intentBuilder</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">CustomTabsIntent</span><span class="o">.</span><span class="na">Builder</span><span class="o">();</span>
+<span class="n">intentBuilder</span><span class="o">.</span><span class="na">setToolbarColor</span><span class="o">(</span><span class="nc">Color</span><span class="o">.</span><span class="na">parseColor</span><span class="o">(</span><span class="s">"#980e03"</span><span class="o">));</span>
+<span class="n">intentBuilder</span><span class="o">.</span><span class="na">build</span><span class="o">().</span><span class="na">launchUrl</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="nc">Uri</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="s">"https://paul.kinlan.me/"</span><span class="o">));</span>
+</pre></td></tr></tbody></table></code></pre>
+</figure>
+
+<p>Toolbar Close Button換圖</p>
+
+<figure class="highlight">
+  <pre><code class="language-java" data-lang="java"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="nc">CustomTabsIntent</span><span class="o">.</span><span class="na">Builder</span> <span class="n">intentBuilder</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">CustomTabsIntent</span><span class="o">.</span><span class="na">Builder</span><span class="o">();</span>
+<span class="n">intentBuilder</span><span class="o">.</span><span class="na">setToolbarColor</span><span class="o">(</span><span class="nc">Color</span><span class="o">.</span><span class="na">parseColor</span><span class="o">(</span><span class="s">"#980e03"</span><span class="o">));</span>
+<span class="n">intentBuilder</span><span class="o">.</span><span class="na">setCloseButtonIcon</span><span class="o">(</span>
+        <span class="nc">BitmapFactory</span><span class="o">.</span><span class="na">decodeResource</span><span class="o">(</span><span class="n">getResources</span><span class="o">(),</span> <span class="no">R</span><span class="o">.</span><span class="na">drawable</span><span class="o">.</span><span class="na">ic_arrow_back</span><span class="o">));</span>
+<span class="n">intentBuilder</span><span class="o">.</span><span class="na">build</span><span class="o">().</span><span class="na">launchUrl</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="nc">Uri</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="s">"https://paul.kinlan.me/"</span><span class="o">));</span>
+</pre></td></tr></tbody></table></code></pre>
+</figure>
+
+<p>增加一個Send Mail的Action Button</p>
+
+<figure class="highlight">
+  <pre><code class="language-java" data-lang="java"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="code"><pre><span class="nc">CustomTabsIntent</span><span class="o">.</span><span class="na">Builder</span> <span class="n">builder</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">CustomTabsIntent</span><span class="o">.</span><span class="na">Builder</span><span class="o">();</span>
+<span class="nc">Intent</span> <span class="n">actionIntent</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Intent</span><span class="o">(</span><span class="nc">Intent</span><span class="o">.</span><span class="na">ACTION_SEND</span><span class="o">);</span>
+<span class="n">actionIntent</span><span class="o">.</span><span class="na">setType</span><span class="o">(</span><span class="s">"*/*"</span><span class="o">);</span>
+<span class="n">actionIntent</span><span class="o">.</span><span class="na">putExtra</span><span class="o">(</span><span class="nc">Intent</span><span class="o">.</span><span class="na">EXTRA_EMAIL</span><span class="o">,</span> <span class="s">"example@example.com"</span><span class="o">);</span>
+<span class="n">actionIntent</span><span class="o">.</span><span class="na">putExtra</span><span class="o">(</span><span class="nc">Intent</span><span class="o">.</span><span class="na">EXTRA_SUBJECT</span><span class="o">,</span> <span class="s">"example"</span><span class="o">);</span>
+<span class="nc">PendingIntent</span> <span class="n">pi</span> <span class="o">=</span> <span class="nc">PendingIntent</span><span class="o">.</span><span class="na">getActivity</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">actionIntent</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span>
+<span class="nc">Bitmap</span> <span class="n">icon</span> <span class="o">=</span> <span class="nc">BitmapFactory</span><span class="o">.</span><span class="na">decodeResource</span><span class="o">(</span><span class="n">getResources</span><span class="o">(),</span> <span class="n">android</span><span class="o">.</span><span class="na">R</span><span class="o">.</span><span class="na">drawable</span><span class="o">.</span><span class="na">ic_dialog_email</span><span class="o">);</span>
+<span class="n">builder</span><span class="o">.</span><span class="na">setActionButton</span><span class="o">(</span><span class="n">icon</span><span class="o">,</span> <span class="s">"send email"</span><span class="o">,</span> <span class="n">pi</span><span class="o">,</span> <span class="kc">true</span><span class="o">);</span>
+</pre></td></tr></tbody></table></code></pre>
+</figure>
+
+<p>增加Menu</p>
+
+<figure class="highlight">
+  <pre><code class="language-java" data-lang="java"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre><span class="nc">CustomTabsIntent</span><span class="o">.</span><span class="na">Builder</span> <span class="n">builder</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">CustomTabsIntent</span><span class="o">.</span><span class="na">Builder</span><span class="o">();</span>
+<span class="nc">Intent</span> <span class="n">menuIntent</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Intent</span><span class="o">();</span>
+<span class="n">menuIntent</span><span class="o">.</span><span class="na">setClass</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">(),</span> <span class="nc">Main2Activity</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+<span class="nc">PendingIntent</span> <span class="n">pi2</span> <span class="o">=</span> <span class="nc">PendingIntent</span><span class="o">.</span><span class="na">getActivity</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">(),</span> <span class="mi">0</span><span class="o">,</span> <span class="n">menuIntent</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span>
+<span class="n">builder</span><span class="o">.</span><span class="na">addMenuItem</span><span class="o">(</span><span class="s">"Menu entry 2"</span><span class="o">,</span> <span class="n">pi2</span><span class="o">);</span>
+<span class="n">builder</span><span class="o">.</span><span class="na">addMenuItem</span><span class="o">(</span><span class="s">"Menu entry 3"</span><span class="o">,</span> <span class="n">pi2</span><span class="o">);</span>
+<span class="n">builder</span><span class="o">.</span><span class="na">addMenuItem</span><span class="o">(</span><span class="s">"Menu entry 4"</span><span class="o">,</span> <span class="n">pi2</span><span class="o">);</span>
+</pre></td></tr></tbody></table></code></pre>
+</figure>
+
+<p>進階功能(目前沒用過)<br />
+參考Demo<a href="https://github.com/GoogleChrome/custom-tabs-client">https://github.com/GoogleChrome/custom-tabs-client</a><br />
+ServiceConnectionActivity.java</p>
+
+<p>CustomTabsClient.bindCustomTabsService（Context context，String packageName，CustomTabsServiceConnection connection）函數來綁定到CustomTabsService，綁定成功後，在通過CustomTabsClient.warmup（long flags）函數來預加載Chrome，這些Chrome會加載一些基本控件，這樣當 打開的時候速度就會比較快;還可以通過CustomTabsClient.newSession（CustomTabsCallback回調）函數來獲取一個自定義標籤的回話，在Callback中可以監聽該回話的導航操作，比如導航是失敗了還是成功了。</p>
+</section>
+            </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div></div>
+    </div>
+</div>
+
+<!-- introduce mathjax support -->
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [ ['$', '$'], ['\\(', '\\)'] ]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script
+  type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+
+<!-- introduce per-page mermaid support -->
+
+
+<!-- introduce mathjax support -->
+<script>
+    function fixes_chrome_anchors() {
+        let chrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+        if (window.location.hash && chrome) {
+            setTimeout(function () {
+                var hash = window.location.hash;
+                window.location.hash = "";
+                window.location.hash = hash;
+            }, 300);
+        }
+    }
+
+    if (document.readyState === "loading") {
+        // Loading hasn't finished yet
+        document.addEventListener("DOMContentLoaded", fixes_chrome_anchors);
+    } else {
+        // `DOMContentLoaded` has already fired
+        fixes_chrome_anchors();
+    }
+</script>
+
+<!------上一頁與下一頁 start---------->
+                    
+                    
+                    
+                    
+    
+                    
+                        
+                        <a href="/pages/android/old/theme_change" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Theme Change">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                    
+
+                    
+                        
+                        <a href="/pages/android/old/momery_leak" class="navigation navigation-next navigation-unique" aria-label="Next page: Handle Memory Leak">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    
+                    <!------上一頁與下一頁 end---------->
+                </div>
+            </div>
+
+            <script>
+            var gitbook = gitbook || [];
+            gitbook.push(function() {
+                gitbook.page.hasChanged({
+    "page": {
+        "title": "Introduction",
+        "level": "1.1",
+        "depth": 1,
+        
+        "next": {
+            "title": "Google Sign-In",
+            "level": "1.2",
+            "depth": 1,
+            "path": "_pages/android/old/google_sign_in.md",
+            "ref": "_pages/android/old/google_sign_in.md",
+            "articles": []
+        },
+        
+        "dir": "ltr"
+    },    "config": {
+        "plugins": ["fontsettings", "highlight", "livereload", "lunr", "search", "sharing", "theme-default", "livereload"],
+        "styles": {
+            "ebook": "styles/ebook.css",
+            "epub": "styles/epub.css",
+            "mobi": "styles/mobi.css",
+            "pdf": "styles/pdf.css",
+            "print": "styles/print.css",
+            "website": "styles/website.css"
+        },
+        "pluginsConfig": {
+            "expandable-chapter-small2": {
+                "articlesExpand": true,
+            },
+            "fontsettings": {
+                "family": "sans",
+                "size": 2,
+                "theme": "white"
+            },
+            "highlight": {},
+            "livereload": {},
+            "lunr": {
+                "ignoreSpecialCharacters": false,
+                "maxIndexSize": 1000000
+            },
+            "search": {},            "sharing": {
+                "facebook": true,
+
+                "google": false,
+
+                "github": true,
+              
+                "github_link": "https://github.com",
+              
+
+                "telegram": false,
+                "telegram_link": "https://t.me",
+
+                "instapaper": false,
+
+                "twitter": true,
+              
+
+                "vk": false,
+
+                "weibo": false,
+
+                "all": ["facebook", "google", "twitter", "weibo", "instapaper", "github", "telegram"]
+            },
+"theme-default": {
+                "showLevel": false,
+                "styles": {
+                    "ebook": "styles/ebook.css",
+                    "epub": "styles/epub.css",
+                    "mobi": "styles/mobi.css",
+                    "pdf": "styles/pdf.css",
+                    "print": "styles/print.css",
+                    "website": "styles/website.css"
+                }
+            },
+        },
+        "theme": "default",
+        "author": "Tao He",
+        "pdf": {
+            "pageNumbers": true,
+            "fontSize": 12,
+            "fontFamily": "Arial",
+            "paperSize": "a4",
+            "chapterMark": "pagebreak",
+            "pageBreaksBefore": "/",
+            "margin": {
+                "right": 62,
+                "left": 62,
+                "top": 56,
+                "bottom": 56
+            }
+        },
+        "structure": {
+            "langs": "LANGS.md",
+            "readme": "README.md",
+        },
+        "variables": {},
+        "title": "old",
+        "language": "en",
+        "gitbook": "*"
+    },
+    "file": {
+        "path": "_pages/android/old/chrome_tabs.md",
+        "mtime": "2023-05-29 00:00:00 +0800",
+        "type": "markdown"
+    },
+    "gitbook": {
+        "version": "",
+        "time": "2025-04-10 13:53:58 +0800"
+    },
+    "basePath": "",
+    "book": {
+        "language": ""
+    }
+});
+            });
+            </script>
+        </div><script src="/assets/gitbook/gitbook.js"></script>
+<script src="/assets/gitbook/theme.js"></script>
+
+<script src="/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-expandable-chapters-small2/expandable-chapters-small.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-search-pro/search.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-sharing/buttons.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-splitter/splitter.js"></script>
+
+<!--
+<script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+<script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+<script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+<script src="../gitbook/gitbook-plugin-search/search.js"></script>
+-->
+
+<script src="/assets/gitbook/custom.js"></script>
+<script src="/assets/gitbook/custom-local.js"></script>
+
+<!-- 有extra_footer_js--><!-- 進入for--><script src="/assets/js/side_bar.js"></script></body>
+</html>

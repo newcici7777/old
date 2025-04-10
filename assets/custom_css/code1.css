@@ -1,0 +1,9 @@
+/* 高亮行样式 */
+.code-line.marked {
+  background-color: #fffbdd;  // 浅黄背景
+  display: block;
+  margin: 0 -10px;
+  padding: 0 10px;
+  border-left: 3px solid #ffcc00; // 左侧标记线
+  position: relative;
+}

@@ -1,0 +1,22 @@
+<div class="book-summary">
+    <nav role="navigation">
+        <div id="book-search-input" role="search">
+            <input type="text" placeholder="Type to search" />
+        </div>
+        <div id="book-search-input-link" role="search">
+            <a href="{{site.baseurl}}/assets/search.html">Click to Search</a>
+        </div>
+        <ul class="summary">
+            <li class="chapter active" data-level="1.1" data-path="{{site.baseurl}}" data-nav-item>
+                <a href="{{site.url}}" data-nav-link>
+                    {{ site.title | escape }}
+                </a>
+            </li>
+            <li class="divider"></li>
+            <!-- path = {{route}} -->
+            {% assign route = include.path %}
+            {% capture path %}{{route}}{% endcapture %}
+            {%- include nav.html nav=site.data.nav.menu path=path -%}
+        </ul>
+    </nav>
+</div>

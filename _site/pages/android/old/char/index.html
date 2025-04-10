@@ -1,0 +1,498 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+<meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>Security圖表存取資料庫的方式 </title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="Cici's old notebook."><meta name="keywords" content="Android, char" /><meta name="seo" content="no seo" /><link rel="stylesheet" href="/assets/gitbook/style.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-expandable-chapters-small2/expandable-chapters-small.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-fontsettings/website.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-search-pro/search.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-splitter/splitter.css">
+
+<link rel="stylesheet" href="/assets/gitbook/rouge/base16.css">
+
+<link rel="stylesheet" href="/assets/gitbook/custom.css">
+<link rel="stylesheet" href="/assets/gitbook/custom-local.css">
+<meta name="google-site-verification" content="65zgvtfJFNDdKge0tDpfLKShsOrANSZ0hsdp1prfxzs" />
+<meta name="HandheldFriendly" content="true"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/assets/gitbook/images/apple-touch-icon-precomposed-152.png">
+<link rel="shortcut icon" href="/" type="image/x-icon">
+
+<link rel="stylesheet" href="/assets/custom_css/code1.css"><link rel="stylesheet" href="/assets/custom_css/native.css"></head>
+    <body>
+        <div class="book">
+            
+            <div class="book-summary">
+    <nav role="navigation">
+        <div id="book-search-input" role="search">
+            <input type="text" placeholder="Type to search" />
+        </div>
+        <div id="book-search-input-link" role="search">
+            <a href="/assets/search.html">Click to Search</a>
+        </div>
+        <ul class="summary">
+            <li class="chapter active" data-level="1.1" data-path="" data-nav-item>
+                <a href="http://localhost:4000" data-nav-link>
+                    old
+                </a>
+            </li>
+            <li class="divider"></li>
+            <!-- path =  -->
+            
+            
+	
+	
+	<li class="chapter" data-level="1.1" data-path="http://localhost:4000" data-nav-item><a href="#" data-nav-link> Android </a><ul>
+	
+	
+	<li class="chapter" data-level="1.2" data-path="http://localhost:4000" data-nav-item><a href="#" data-nav-link> thread </a><ul>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/android_thread/" data-nav-link> Android thread</a>
+        </li></ul></li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/kdoc/" data-nav-link> kdoc</a>
+        </li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/adb/" data-nav-link> ADB</a>
+        </li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/intellij_coroutine/" data-nav-link> Intellij 安裝Coroutine</a>
+        </li>
+	
+	
+	<li class="chapter" data-level="1.2" data-path="http://localhost:4000" data-nav-item><a href="#" data-nav-link> 舊的技術 </a><ul>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/old/app_update/" data-nav-link> app update</a>
+        </li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/old/google_sign_in/" data-nav-link> Google Sign-In</a>
+        </li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/old/app_purchase/" data-nav-link> In App Purchase Flow</a>
+        </li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/old/theme_change/" data-nav-link> Theme Change</a>
+        </li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/old/chrome_tabs/" data-nav-link> Chrome Custom Tabs</a>
+        </li>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/old/momery_leak/" data-nav-link> Handle Memory Leak</a>
+        </li></ul></li>
+	
+	
+	<li class="chapter" data-level="1.2" data-path="http://localhost:4000" data-nav-item><a href="#" data-nav-link> error </a><ul>
+	
+	
+	<li class="" data-nav-item>
+    	<a href="/pages/android/kapt_err/" data-nav-link> kaptGenerateStubsDebugKotlin task (current target is 17) jvm target</a>
+        </li></ul></li></ul></li></ul>
+    </nav>
+</div>
+            <div class="book-body">
+                <div class="book-header" role="navigation">
+                    <!-- Title -->
+                    <h1>
+                        <i class="fa fa-circle-o-notch fa-spin"></i>
+                        
+                            <a href="." >Security圖表存取資料庫的方式</a>
+                        
+                    </h1>
+                </div>
+
+                <div class="body-inner"><div class="page-wrapper" tabindex="-1" role="main">
+    
+
+    <div class="page-inner">
+        <div id="book-search-results">
+            <div class="search-noresults">
+                <section class="normal markdown-section">
+                    
+                        <h1 id="/pages/android/old/char">Security圖表存取資料庫的方式</h1>
+                    
+
+                    <p>程式碼1<br />
+<img src="/assets/img/android/old/char1.png" alt="img" /></p>
+
+<p>若沒有insert過，就預設找出前30天的資料。<br />
+程式碼1#235，代入localtime的11/2號的00:00:00與現在時間<br />
+圖1<br />
+<img src="/assets/img/android/old/char2.png" alt="img" /></p>
+
+<p>Json資料如下：<br />
+<img src="/assets/img/android/old/char3.png" alt="img" /></p>
+
+<p><img src="/assets/img/android/old/char4.png" alt="img" /></p>
+
+<p>資料表Event Log
+<img src="/assets/img/android/old/char5.png" alt="img" /></p>
+
+<figure class="highlight">
+  <pre><code class="language-java" data-lang="java"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+</pre></td><td class="code"><pre><span class="cm">/**
+ * 演算法：先移到這個禮拜的最後一天，取得這個禮拜的最後一天的日期，再往前減七天，就可以取得這個禮拜的第一天
+ * 再往前減一天，就取得上一個禮拜的最後一天，再往前減6天，就取得上一個禮拜的第1天。
+ * 再往前減一天，就取得上上一個禮拜的最後一天，再往前減6天，就取得上上一個禮拜的第1天。以此往下類推。
+ * 
+ * 回傳Array的格式為
+ * [0][0]=這個禮拜的第一天   [0][1]=這個禮拜的最後一天
+ * [1][0]=上禮拜的第一天     [1][1]=上禮拜的最後一天
+ * [2][0]=上上禮拜的第一天   [2][1]=上上禮拜的最後一天
+ * [3][0]=上上上禮拜的第一天 [3][1]=上上上禮拜的最後一天
+ * [4][0]=上上上上禮拜的第一天 [4][1]=上上上上禮拜的最後一天
+ * 
+ * 顯示前30天的周區間
+ * 假設今天是台灣時間2019/01/14，星期是日一二三四五六排序*
+ * 回傳的week array如下
+ * [0]=Start Time     [1]=End Time
+ * [0][0]=2019/1/13   [0][1]=2019/1/19
+ * [1][0]=2019/1/06   [1][1]=2019/1/12
+ * [2][0]=2018/12/30  [2][1]=2019/1/05
+ * [3][0]=2018/12/23  [3][1]=2018/12/29
+ * [4][0]=2018/12/16  [4][1]=2018/12/22
+ *
+ * @return
+ */</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">long</span><span class="o">[][]</span> <span class="nf">get4WeekStartEnd</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kt">long</span><span class="o">[][]</span> <span class="n">weekArr</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+    <span class="kt">int</span> <span class="n">weekCnt</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span><span class="c1">//只抓五周</span>
+    <span class="nc">Locale</span> <span class="n">locale</span> <span class="o">=</span> <span class="nc">Locale</span><span class="o">.</span><span class="na">getDefault</span><span class="o">();</span>
+    <span class="nc">TimeZone</span> <span class="n">default_tz</span> <span class="o">=</span> <span class="nc">TimeZone</span><span class="o">.</span><span class="na">getDefault</span><span class="o">();</span>
+    <span class="nc">Calendar</span> <span class="n">c</span> <span class="o">=</span> <span class="nc">Calendar</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="n">default_tz</span><span class="o">,</span> <span class="n">locale</span><span class="o">);</span>
+
+    <span class="n">c</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">HOUR_OF_DAY</span><span class="o">,</span> <span class="mi">23</span><span class="o">);</span>
+    <span class="n">c</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">MINUTE</span><span class="o">,</span> <span class="mi">59</span><span class="o">);</span>
+    <span class="n">c</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">SECOND</span><span class="o">,</span> <span class="mi">59</span><span class="o">);</span>
+
+    <span class="kt">int</span> <span class="n">day_of_thisWeek</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">DAY_OF_WEEK</span><span class="o">);</span><span class="c1">//取出今天是一個禮拜的第幾天</span>
+    <span class="c1">//參考資料http://chartsbin.com/view/41671</span>
+    <span class="kt">int</span> <span class="n">first_of_thisWeek</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="na">getFirstDayOfWeek</span><span class="o">();</span><span class="c1">//取得一個禮拜的第一天是禮拜幾(英國第一天是禮拜一，台灣第一天是禮拜天，阿富汗的第一天是禮拜六)</span>
+    <span class="c1">//禮拜天-&gt;1，禮拜一-&gt;2，禮拜二-&gt;3，禮拜三-&gt;4，禮拜四-&gt;5，禮拜五-&gt;6，禮拜六-&gt;7</span>
+    <span class="kt">int</span> <span class="n">between_days</span> <span class="o">=</span> <span class="nc">SecurityConstant</span><span class="o">.</span><span class="na">WEEK_DAYS</span> <span class="o">-</span> <span class="n">day_of_thisWeek</span><span class="o">;</span><span class="c1">//這是假設first day of week是禮拜天，若今天是禮拜二，day會回傳3   7-3=4，也就是禮拜二到禮拜六之間有四天</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">first_of_thisWeek</span> <span class="o">==</span> <span class="nc">SecurityConstant</span><span class="o">.</span><span class="na">WEEK_DAYS</span><span class="o">)</span> <span class="o">{</span><span class="c1">//first day of week是禮拜六，回7</span>
+        <span class="n">between_days</span> <span class="o">-=</span> <span class="mi">1</span><span class="o">;</span>
+    <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">first_of_thisWeek</span> <span class="o">==</span> <span class="mi">2</span><span class="o">)</span> <span class="o">{</span><span class="c1">//first day of week是禮拜一，回2</span>
+        <span class="n">between_days</span> <span class="o">+=</span> <span class="mi">1</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">between_days</span> <span class="o">&gt;=</span> <span class="mi">5</span><span class="o">)</span><span class="c1">//若這周只過完剩下6天或7天，就顯示</span>
+        <span class="n">weekCnt</span> <span class="o">=</span> <span class="mi">6</span><span class="o">;</span><span class="c1">//抓六周資料</span>
+
+    <span class="n">weekArr</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">long</span><span class="o">[</span><span class="n">weekCnt</span><span class="o">][</span><span class="mi">2</span><span class="o">];</span>
+    <span class="n">c</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">DAY_OF_MONTH</span><span class="o">,</span> <span class="n">between_days</span> <span class="o">+</span> <span class="mi">1</span><span class="o">);</span><span class="c1">///移到這個禮拜的最後一天再加1天(請對映演算法說明)</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">weekCnt</span> <span class="o">-</span> <span class="mi">1</span><span class="o">;</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">--)</span> <span class="o">{</span><span class="c1">//只抓五周</span>
+        <span class="n">c</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">DAY_OF_MONTH</span><span class="o">,</span> <span class="o">-</span><span class="mi">1</span><span class="o">);</span><span class="c1">//再往前減一天，就取得這個禮拜的最後一天(請對映演算法說明)</span>
+        <span class="n">weekArr</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="na">getTimeInMillis</span><span class="o">()</span> <span class="o">/</span> <span class="mi">1000</span><span class="o">;</span><span class="c1">//endtime</span>
+        <span class="n">c</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">HOUR_OF_DAY</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span>
+        <span class="n">c</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">MINUTE</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span>
+        <span class="n">c</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">SECOND</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span>
+        <span class="n">c</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">DAY_OF_MONTH</span><span class="o">,</span> <span class="o">-</span><span class="mi">6</span><span class="o">);</span><span class="c1">//再往前減6天，就取得這禮拜的第1天。(請對映演算法說明)</span>
+
+        <span class="n">weekArr</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="na">getTimeInMillis</span><span class="o">()</span> <span class="o">/</span> <span class="mi">1000</span><span class="o">;</span><span class="c1">//start time</span>
+        <span class="nc">LogUtil</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="no">TAG</span><span class="o">,</span> <span class="nc">APPUtils</span><span class="o">.</span><span class="na">timestampToYMMMD</span><span class="o">(</span><span class="n">weekArr</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="mi">1</span><span class="o">])</span> <span class="o">+</span> <span class="s">"-"</span> <span class="o">+</span> <span class="nc">APPUtils</span><span class="o">.</span><span class="na">timestampToYMMMD</span><span class="o">(</span><span class="n">weekArr</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="mi">0</span><span class="o">]));</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">weekArr</span><span class="o">;</span>
+<span class="o">}</span>
+</pre></td></tr></tbody></table></code></pre>
+</figure>
+
+<p>排名次的圖表
+String json = “{"start_time":1527951600,"end_time":1528023600,"query":{"dev-uuid":"550e8400-e29b-41d4-a716-446655440000"},"terms":["client-mac","event-class"],"ranking_size": 10}”;</p>
+</section>
+            </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div></div>
+    </div>
+</div>
+
+<!-- introduce mathjax support -->
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [ ['$', '$'], ['\\(', '\\)'] ]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script
+  type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+
+<!-- introduce per-page mermaid support -->
+
+
+<!-- introduce mathjax support -->
+<script>
+    function fixes_chrome_anchors() {
+        let chrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+        if (window.location.hash && chrome) {
+            setTimeout(function () {
+                var hash = window.location.hash;
+                window.location.hash = "";
+                window.location.hash = hash;
+            }, 300);
+        }
+    }
+
+    if (document.readyState === "loading") {
+        // Loading hasn't finished yet
+        document.addEventListener("DOMContentLoaded", fixes_chrome_anchors);
+    } else {
+        // `DOMContentLoaded` has already fired
+        fixes_chrome_anchors();
+    }
+</script>
+
+<!------上一頁與下一頁 start---------->
+                    
+                    
+                    
+                    
+    
+                    
+
+                    
+                    <!------上一頁與下一頁 end---------->
+                </div>
+            </div>
+
+            <script>
+            var gitbook = gitbook || [];
+            gitbook.push(function() {
+                gitbook.page.hasChanged({
+    "page": {
+        "title": "Introduction",
+        "level": "1.1",
+        "depth": 1,
+        
+        "next": {
+            "title": "Chrome Custom Tabs",
+            "level": "1.2",
+            "depth": 1,
+            "path": "_pages/android/old/chrome_tabs.md",
+            "ref": "_pages/android/old/chrome_tabs.md",
+            "articles": []
+        },
+        
+        "dir": "ltr"
+    },    "config": {
+        "plugins": ["fontsettings", "highlight", "livereload", "lunr", "search", "sharing", "theme-default", "livereload"],
+        "styles": {
+            "ebook": "styles/ebook.css",
+            "epub": "styles/epub.css",
+            "mobi": "styles/mobi.css",
+            "pdf": "styles/pdf.css",
+            "print": "styles/print.css",
+            "website": "styles/website.css"
+        },
+        "pluginsConfig": {
+            "expandable-chapter-small2": {
+                "articlesExpand": true,
+            },
+            "fontsettings": {
+                "family": "sans",
+                "size": 2,
+                "theme": "white"
+            },
+            "highlight": {},
+            "livereload": {},
+            "lunr": {
+                "ignoreSpecialCharacters": false,
+                "maxIndexSize": 1000000
+            },
+            "search": {},            "sharing": {
+                "facebook": true,
+
+                "google": false,
+
+                "github": true,
+              
+                "github_link": "https://github.com",
+              
+
+                "telegram": false,
+                "telegram_link": "https://t.me",
+
+                "instapaper": false,
+
+                "twitter": true,
+              
+
+                "vk": false,
+
+                "weibo": false,
+
+                "all": ["facebook", "google", "twitter", "weibo", "instapaper", "github", "telegram"]
+            },
+"theme-default": {
+                "showLevel": false,
+                "styles": {
+                    "ebook": "styles/ebook.css",
+                    "epub": "styles/epub.css",
+                    "mobi": "styles/mobi.css",
+                    "pdf": "styles/pdf.css",
+                    "print": "styles/print.css",
+                    "website": "styles/website.css"
+                }
+            },
+        },
+        "theme": "default",
+        "author": "Tao He",
+        "pdf": {
+            "pageNumbers": true,
+            "fontSize": 12,
+            "fontFamily": "Arial",
+            "paperSize": "a4",
+            "chapterMark": "pagebreak",
+            "pageBreaksBefore": "/",
+            "margin": {
+                "right": 62,
+                "left": 62,
+                "top": 56,
+                "bottom": 56
+            }
+        },
+        "structure": {
+            "langs": "LANGS.md",
+            "readme": "README.md",
+        },
+        "variables": {},
+        "title": "old",
+        "language": "en",
+        "gitbook": "*"
+    },
+    "file": {
+        "path": "_pages/android/old/char.md",
+        "mtime": "2023-05-29 00:00:00 +0800",
+        "type": "markdown"
+    },
+    "gitbook": {
+        "version": "",
+        "time": "2025-04-10 13:53:58 +0800"
+    },
+    "basePath": "",
+    "book": {
+        "language": ""
+    }
+});
+            });
+            </script>
+        </div><script src="/assets/gitbook/gitbook.js"></script>
+<script src="/assets/gitbook/theme.js"></script>
+
+<script src="/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-expandable-chapters-small2/expandable-chapters-small.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-search-pro/search.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-sharing/buttons.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-splitter/splitter.js"></script>
+
+<!--
+<script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+<script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+<script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+<script src="../gitbook/gitbook-plugin-search/search.js"></script>
+-->
+
+<script src="/assets/gitbook/custom.js"></script>
+<script src="/assets/gitbook/custom-local.js"></script>
+
+<!-- 有extra_footer_js--><!-- 進入for--><script src="/assets/js/side_bar.js"></script></body>
+</html>
